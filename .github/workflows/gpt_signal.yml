@@ -1,27 +1,15 @@
-name: GPT Signal Scanner
+name: Keep Streamlit Awake
 
 on:
   schedule:
-    - cron: "30 21 * * *"  # 매일 06:30 KST
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
-  run-signal:
+  keep-awake:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
+      - name: Wake Streamlit App
         run: |
-          pip install yfinance pandas numpy
-
-      - name: Run GPT Signal Scanner
-        run: |
-          python gpt_app.py
+          curl -L --max-time 60 -s -o /dev/null -w "%{http_code}\n" https://quant-signal.streamlit.app
