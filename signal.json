@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-09-18 04:49:16",
+  "lookback_days": 5,
+  "signals": [
+    {
+      "ticker": "AES",
+      "date": "2026-09-15",
+      "score": 3,
+      "close": 14.85
+    },
+    {
+      "ticker": "NUE",
+      "date": "2026-09-15",
+      "score": 2,
+      "close": 265.14
+    },
+    {
+      "ticker": "HPQ",
+      "date": "2026-09-15",
+      "score": 1,
+      "close": 34.66
+    },
+    {
+      "ticker": "ADM",
+      "date": "2026-09-15",
+      "score": 1,
+      "close": 88.09
+    },
+    {
+      "ticker": "PSX",
+      "date": "2026-09-14",
+      "score": 2,
+      "close": 274.21
+    },
+    {
+      "ticker": "DELL",
+      "date": "2026-09-14",
+      "score": 1,
+      "close": 588.4
+    },
+    {
+      "ticker": "MPC",
+      "date": "2026-09-14",
+      "score": 1,
+      "close": 421.96
+    }
+  ]
+}
