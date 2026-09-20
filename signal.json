@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19 22:44:54",
+  "generated_at": "2026-09-20 23:04:47",
   "lookback_days": 5,
   "signals": [
     {
@@ -37,24 +37,6 @@
       "date": "2026-09-15",
       "score": 1,
       "close": 34.4
-    },
-    {
-      "ticker": "PSX",
-      "date": "2026-09-14",
-      "score": 2,
-      "close": 273.13
-    },
-    {
-      "ticker": "DELL",
-      "date": "2026-09-14",
-      "score": 1,
-      "close": 568.06
-    },
-    {
-      "ticker": "MPC",
-      "date": "2026-09-14",
-      "score": 1,
-      "close": 424.89
     }
   ]
 }
