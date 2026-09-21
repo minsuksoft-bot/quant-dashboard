@@ -1,42 +1,48 @@
 {
-  "generated_at": "2026-09-20 23:04:47",
+  "generated_at": "2026-09-21 23:54:52",
   "lookback_days": 5,
   "signals": [
     {
-      "ticker": "XOM",
-      "date": "2026-09-16",
+      "ticker": "TKO",
+      "date": "2026-09-17",
       "score": 3,
-      "close": 163.54
+      "close": 191.12
     },
     {
       "ticker": "EXPD",
-      "date": "2026-09-16",
+      "date": "2026-09-17",
       "score": 3,
-      "close": 190.94
+      "close": 192.15
+    },
+    {
+      "ticker": "SG",
+      "date": "2026-09-17",
+      "score": 3,
+      "close": 7.48
     },
     {
       "ticker": "MKTX",
-      "date": "2026-09-16",
+      "date": "2026-09-17",
       "score": 3,
-      "close": 163.42
+      "close": 163.44
+    },
+    {
+      "ticker": "AI",
+      "date": "2026-09-17",
+      "score": 1,
+      "close": 10.84
+    },
+    {
+      "ticker": "AAPL",
+      "date": "2026-09-16",
+      "score": 1,
+      "close": 338.98
     },
     {
       "ticker": "INSP",
       "date": "2026-09-16",
       "score": 1,
-      "close": 76.78
-    },
-    {
-      "ticker": "PFG",
-      "date": "2026-09-16",
-      "score": 1,
-      "close": 117.67
-    },
-    {
-      "ticker": "HPQ",
-      "date": "2026-09-15",
-      "score": 1,
-      "close": 34.4
+      "close": 75.72
     }
   ]
 }
