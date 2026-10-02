@@ -1,5 +1,54 @@
 {
-  "generated_at": "2026-10-01 00:26:20",
+  "generated_at": "2026-10-02 00:36:24",
   "lookback_days": 5,
-  "signals": []
+  "signals": [
+    {
+      "ticker": "AES",
+      "date": "2026-09-28",
+      "score": 3,
+      "close": 14.9
+    },
+    {
+      "ticker": "RXRX",
+      "date": "2026-09-28",
+      "score": 2,
+      "close": 4.13
+    },
+    {
+      "ticker": "DOCS",
+      "date": "2026-09-28",
+      "score": 2,
+      "close": 28.34
+    },
+    {
+      "ticker": "WBD",
+      "date": "2026-09-28",
+      "score": 1,
+      "close": 30.95
+    },
+    {
+      "ticker": "FTNT",
+      "date": "2026-09-28",
+      "score": 1,
+      "close": 178.76
+    },
+    {
+      "ticker": "TWLO",
+      "date": "2026-09-28",
+      "score": 1,
+      "close": 292.46
+    },
+    {
+      "ticker": "HPE",
+      "date": "2026-09-28",
+      "score": 1,
+      "close": 63.89
+    },
+    {
+      "ticker": "OKTA",
+      "date": "2026-09-28",
+      "score": 1,
+      "close": 209.11
+    }
+  ]
 }
