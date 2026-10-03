@@ -1,102 +1,126 @@
 {
-  "generated_at": "2026-10-03 00:14:52",
+  "generated_at": "2026-10-03 23:35:55",
   "lookback_days": 5,
   "signals": [
     {
-      "ticker": "AES",
-      "date": "2026-09-29",
-      "score": 3,
-      "close": 14.92
-    },
-    {
-      "ticker": "MKTX",
-      "date": "2026-09-29",
-      "score": 3,
-      "close": 164.22
-    },
-    {
-      "ticker": "MSTR",
-      "date": "2026-09-29",
+      "ticker": "SMCI",
+      "date": "2026-09-30",
       "score": 2,
-      "close": 160.5
+      "close": 43.69
     },
     {
       "ticker": "ANET",
-      "date": "2026-09-29",
+      "date": "2026-09-30",
       "score": 2,
-      "close": 204.49
+      "close": 207.35
+    },
+    {
+      "ticker": "TEL",
+      "date": "2026-09-30",
+      "score": 2,
+      "close": 220.36
+    },
+    {
+      "ticker": "WCC",
+      "date": "2026-09-30",
+      "score": 2,
+      "close": 381.73
+    },
+    {
+      "ticker": "BE",
+      "date": "2026-09-30",
+      "score": 2,
+      "close": 289.15
+    },
+    {
+      "ticker": "APH",
+      "date": "2026-09-30",
+      "score": 1,
+      "close": 86.96
+    },
+    {
+      "ticker": "SCCO",
+      "date": "2026-09-30",
+      "score": 1,
+      "close": 205.54
+    },
+    {
+      "ticker": "OLLI",
+      "date": "2026-09-30",
+      "score": 1,
+      "close": 88.06
     },
     {
       "ticker": "HPE",
       "date": "2026-09-29",
       "score": 2,
-      "close": 64.58
+      "close": 69.33
     },
     {
       "ticker": "NVDA",
       "date": "2026-09-29",
       "score": 1,
-      "close": 230.86
+      "close": 233.95
+    },
+    {
+      "ticker": "MSFT",
+      "date": "2026-09-29",
+      "score": 1,
+      "close": 517.53
     },
     {
       "ticker": "CLS",
       "date": "2026-09-29",
       "score": 1,
-      "close": 373.09
+      "close": 387.32
     },
     {
-      "ticker": "NET",
+      "ticker": "PANW",
       "date": "2026-09-29",
       "score": 1,
-      "close": 351.0
+      "close": 403.24
     },
     {
-      "ticker": "STX",
+      "ticker": "FTNT",
       "date": "2026-09-29",
       "score": 1,
-      "close": 945.57
-    },
-    {
-      "ticker": "WCC",
-      "date": "2026-09-29",
-      "score": 1,
-      "close": 371.28
+      "close": 180.95
     },
     {
       "ticker": "RXRX",
       "date": "2026-09-28",
       "score": 2,
-      "close": 4.07
+      "close": 4.12
     },
     {
       "ticker": "DOCS",
       "date": "2026-09-28",
       "score": 2,
-      "close": 28.5
+      "close": 27.93
     },
     {
       "ticker": "LITE",
       "date": "2026-09-28",
       "score": 2,
-      "close": 1045.78
+      "close": 1085.42
     },
     {
       "ticker": "TSM",
       "date": "2026-09-28",
       "score": 1,
-      "close": 459.2
+      "close": 472.78
     },
     {
       "ticker": "TWLO",
       "date": "2026-09-28",
       "score": 1,
-      "close": 301.27
+      "close": 294.58
     },
     {
       "ticker": "OKTA",
       "date": "2026-09-28",
       "score": 1,
-      "close": 212.63
+      "close": 211.49
     }
   ]
 }
