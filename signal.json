@@ -1,54 +1,102 @@
 {
-  "generated_at": "2026-10-02 00:36:24",
+  "generated_at": "2026-10-03 00:14:52",
   "lookback_days": 5,
   "signals": [
     {
       "ticker": "AES",
-      "date": "2026-09-28",
+      "date": "2026-09-29",
       "score": 3,
-      "close": 14.9
+      "close": 14.92
+    },
+    {
+      "ticker": "MKTX",
+      "date": "2026-09-29",
+      "score": 3,
+      "close": 164.22
+    },
+    {
+      "ticker": "MSTR",
+      "date": "2026-09-29",
+      "score": 2,
+      "close": 160.5
+    },
+    {
+      "ticker": "ANET",
+      "date": "2026-09-29",
+      "score": 2,
+      "close": 204.49
+    },
+    {
+      "ticker": "HPE",
+      "date": "2026-09-29",
+      "score": 2,
+      "close": 64.58
+    },
+    {
+      "ticker": "NVDA",
+      "date": "2026-09-29",
+      "score": 1,
+      "close": 230.86
+    },
+    {
+      "ticker": "CLS",
+      "date": "2026-09-29",
+      "score": 1,
+      "close": 373.09
+    },
+    {
+      "ticker": "NET",
+      "date": "2026-09-29",
+      "score": 1,
+      "close": 351.0
+    },
+    {
+      "ticker": "STX",
+      "date": "2026-09-29",
+      "score": 1,
+      "close": 945.57
+    },
+    {
+      "ticker": "WCC",
+      "date": "2026-09-29",
+      "score": 1,
+      "close": 371.28
     },
     {
       "ticker": "RXRX",
       "date": "2026-09-28",
       "score": 2,
-      "close": 4.13
+      "close": 4.07
     },
     {
       "ticker": "DOCS",
       "date": "2026-09-28",
       "score": 2,
-      "close": 28.34
+      "close": 28.5
     },
     {
-      "ticker": "WBD",
+      "ticker": "LITE",
       "date": "2026-09-28",
-      "score": 1,
-      "close": 30.95
+      "score": 2,
+      "close": 1045.78
     },
     {
-      "ticker": "FTNT",
+      "ticker": "TSM",
       "date": "2026-09-28",
       "score": 1,
-      "close": 178.76
+      "close": 459.2
     },
     {
       "ticker": "TWLO",
       "date": "2026-09-28",
       "score": 1,
-      "close": 292.46
-    },
-    {
-      "ticker": "HPE",
-      "date": "2026-09-28",
-      "score": 1,
-      "close": 63.89
+      "close": 301.27
     },
     {
       "ticker": "OKTA",
       "date": "2026-09-28",
       "score": 1,
-      "close": 209.11
+      "close": 212.63
     }
   ]
 }
