@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03 23:35:55",
+  "generated_at": "2026-10-04 23:52:52",
   "lookback_days": 5,
   "signals": [
     {
@@ -85,42 +85,6 @@
       "date": "2026-09-29",
       "score": 1,
       "close": 180.95
-    },
-    {
-      "ticker": "RXRX",
-      "date": "2026-09-28",
-      "score": 2,
-      "close": 4.12
-    },
-    {
-      "ticker": "DOCS",
-      "date": "2026-09-28",
-      "score": 2,
-      "close": 27.93
-    },
-    {
-      "ticker": "LITE",
-      "date": "2026-09-28",
-      "score": 2,
-      "close": 1085.42
-    },
-    {
-      "ticker": "TSM",
-      "date": "2026-09-28",
-      "score": 1,
-      "close": 472.78
-    },
-    {
-      "ticker": "TWLO",
-      "date": "2026-09-28",
-      "score": 1,
-      "close": 294.58
-    },
-    {
-      "ticker": "OKTA",
-      "date": "2026-09-28",
-      "score": 1,
-      "close": 211.49
     }
   ]
 }
