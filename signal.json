@@ -1,90 +1,48 @@
 {
-  "generated_at": "2026-10-04 23:52:52",
+  "generated_at": "2026-10-06 01:42:15",
   "lookback_days": 5,
   "signals": [
     {
-      "ticker": "SMCI",
-      "date": "2026-09-30",
+      "ticker": "CRL",
+      "date": "2026-10-01",
       "score": 2,
-      "close": 43.69
+      "close": 310.77
     },
     {
-      "ticker": "ANET",
-      "date": "2026-09-30",
+      "ticker": "FFIV",
+      "date": "2026-10-01",
       "score": 2,
-      "close": 207.35
+      "close": 458.53
     },
     {
-      "ticker": "TEL",
-      "date": "2026-09-30",
+      "ticker": "TEVA",
+      "date": "2026-10-01",
       "score": 2,
-      "close": 220.36
-    },
-    {
-      "ticker": "WCC",
-      "date": "2026-09-30",
-      "score": 2,
-      "close": 381.73
-    },
-    {
-      "ticker": "BE",
-      "date": "2026-09-30",
-      "score": 2,
-      "close": 289.15
-    },
-    {
-      "ticker": "APH",
-      "date": "2026-09-30",
-      "score": 1,
-      "close": 86.96
-    },
-    {
-      "ticker": "SCCO",
-      "date": "2026-09-30",
-      "score": 1,
-      "close": 205.54
-    },
-    {
-      "ticker": "OLLI",
-      "date": "2026-09-30",
-      "score": 1,
-      "close": 88.06
-    },
-    {
-      "ticker": "HPE",
-      "date": "2026-09-29",
-      "score": 2,
-      "close": 69.33
-    },
-    {
-      "ticker": "NVDA",
-      "date": "2026-09-29",
-      "score": 1,
-      "close": 233.95
+      "close": 39.66
     },
     {
       "ticker": "MSFT",
-      "date": "2026-09-29",
+      "date": "2026-10-01",
       "score": 1,
-      "close": 517.53
+      "close": 525.18
     },
     {
-      "ticker": "CLS",
-      "date": "2026-09-29",
+      "ticker": "WBD",
+      "date": "2026-10-01",
       "score": 1,
-      "close": 387.32
+      "close": 30.95
     },
     {
-      "ticker": "PANW",
-      "date": "2026-09-29",
+      "ticker": "VEEV",
+      "date": "2026-10-01",
       "score": 1,
-      "close": 403.24
+      "close": 283.45
     },
     {
-      "ticker": "FTNT",
-      "date": "2026-09-29",
+      "ticker": "GAP",
+      "date": "2026-10-01",
       "score": 1,
-      "close": 180.95
+      "close": 23.3
     }
   ]
 }
