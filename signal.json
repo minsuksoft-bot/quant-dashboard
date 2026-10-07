@@ -1,48 +1,5 @@
 {
-  "generated_at": "2026-10-06 01:42:15",
+  "generated_at": "2026-10-07 00:28:05",
   "lookback_days": 5,
-  "signals": [
-    {
-      "ticker": "CRL",
-      "date": "2026-10-01",
-      "score": 2,
-      "close": 310.77
-    },
-    {
-      "ticker": "FFIV",
-      "date": "2026-10-01",
-      "score": 2,
-      "close": 458.53
-    },
-    {
-      "ticker": "TEVA",
-      "date": "2026-10-01",
-      "score": 2,
-      "close": 39.66
-    },
-    {
-      "ticker": "MSFT",
-      "date": "2026-10-01",
-      "score": 1,
-      "close": 525.18
-    },
-    {
-      "ticker": "WBD",
-      "date": "2026-10-01",
-      "score": 1,
-      "close": 30.95
-    },
-    {
-      "ticker": "VEEV",
-      "date": "2026-10-01",
-      "score": 1,
-      "close": 283.45
-    },
-    {
-      "ticker": "GAP",
-      "date": "2026-10-01",
-      "score": 1,
-      "close": 23.3
-    }
-  ]
+  "signals": []
 }
