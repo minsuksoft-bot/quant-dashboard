@@ -1,5 +1,24 @@
 {
-  "generated_at": "2026-10-08 00:48:30",
+  "generated_at": "2026-10-09 01:02:56",
   "lookback_days": 5,
-  "signals": []
+  "signals": [
+    {
+      "ticker": "MKTX",
+      "date": "2026-10-05",
+      "score": 3,
+      "close": 164.17
+    },
+    {
+      "ticker": "PLTR",
+      "date": "2026-10-05",
+      "score": 2,
+      "close": 194.12
+    },
+    {
+      "ticker": "ZBRA",
+      "date": "2026-10-05",
+      "score": 1,
+      "close": 386.05
+    }
+  ]
 }
