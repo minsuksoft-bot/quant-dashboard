@@ -1,24 +1,30 @@
 {
-  "generated_at": "2026-10-09 01:02:56",
+  "generated_at": "2026-10-10 00:34:20",
   "lookback_days": 5,
   "signals": [
     {
-      "ticker": "MKTX",
-      "date": "2026-10-05",
+      "ticker": "IT",
+      "date": "2026-10-06",
       "score": 3,
-      "close": 164.17
+      "close": 195.41
+    },
+    {
+      "ticker": "MKTX",
+      "date": "2026-10-06",
+      "score": 3,
+      "close": 164.31
+    },
+    {
+      "ticker": "SNOW",
+      "date": "2026-10-06",
+      "score": 2,
+      "close": 343.4
     },
     {
       "ticker": "PLTR",
       "date": "2026-10-05",
       "score": 2,
-      "close": 194.12
-    },
-    {
-      "ticker": "ZBRA",
-      "date": "2026-10-05",
-      "score": 1,
-      "close": 386.05
+      "close": 198.78
     }
   ]
 }
