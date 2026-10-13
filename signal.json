@@ -1,78 +1,48 @@
 {
-  "generated_at": "2026-10-12 00:18:37",
+  "generated_at": "2026-10-13 02:29:24",
   "lookback_days": 5,
   "signals": [
     {
-      "ticker": "SNOW",
-      "date": "2026-10-07",
+      "ticker": "AES",
+      "date": "2026-10-08",
       "score": 3,
-      "close": 368.89
+      "close": 14.98
     },
     {
       "ticker": "TEVA",
-      "date": "2026-10-07",
+      "date": "2026-10-08",
       "score": 3,
-      "close": 41.1
+      "close": 41.17
     },
     {
-      "ticker": "MKTX",
-      "date": "2026-10-07",
-      "score": 3,
-      "close": 164.58
-    },
-    {
-      "ticker": "CRWD",
-      "date": "2026-10-07",
+      "ticker": "CRL",
+      "date": "2026-10-08",
       "score": 2,
-      "close": 275.04
+      "close": 301.86
     },
     {
-      "ticker": "DDOG",
-      "date": "2026-10-07",
-      "score": 2,
-      "close": 293.26
-    },
-    {
-      "ticker": "TEL",
-      "date": "2026-10-07",
-      "score": 2,
-      "close": 218.29
-    },
-    {
-      "ticker": "AES",
-      "date": "2026-10-07",
-      "score": 2,
-      "close": 14.94
-    },
-    {
-      "ticker": "APH",
-      "date": "2026-10-07",
+      "ticker": "MSFT",
+      "date": "2026-10-08",
       "score": 1,
-      "close": 87.24
+      "close": 541.15
     },
     {
-      "ticker": "PANW",
-      "date": "2026-10-07",
+      "ticker": "ZETA",
+      "date": "2026-10-08",
       "score": 1,
-      "close": 418.78
+      "close": 33.51
     },
     {
-      "ticker": "KEYS",
-      "date": "2026-10-07",
+      "ticker": "IOT",
+      "date": "2026-10-08",
       "score": 1,
-      "close": 382.75
+      "close": 41.62
     },
     {
-      "ticker": "JCI",
-      "date": "2026-10-07",
+      "ticker": "ZBRA",
+      "date": "2026-10-08",
       "score": 1,
-      "close": 157.44
-    },
-    {
-      "ticker": "DT",
-      "date": "2026-10-07",
-      "score": 1,
-      "close": 63.5
+      "close": 388.12
     }
   ]
 }
