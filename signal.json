@@ -1,48 +1,5 @@
 {
-  "generated_at": "2026-10-13 02:29:24",
+  "generated_at": "2026-10-14 00:12:39",
   "lookback_days": 5,
-  "signals": [
-    {
-      "ticker": "AES",
-      "date": "2026-10-08",
-      "score": 3,
-      "close": 14.98
-    },
-    {
-      "ticker": "TEVA",
-      "date": "2026-10-08",
-      "score": 3,
-      "close": 41.17
-    },
-    {
-      "ticker": "CRL",
-      "date": "2026-10-08",
-      "score": 2,
-      "close": 301.86
-    },
-    {
-      "ticker": "MSFT",
-      "date": "2026-10-08",
-      "score": 1,
-      "close": 541.15
-    },
-    {
-      "ticker": "ZETA",
-      "date": "2026-10-08",
-      "score": 1,
-      "close": 33.51
-    },
-    {
-      "ticker": "IOT",
-      "date": "2026-10-08",
-      "score": 1,
-      "close": 41.62
-    },
-    {
-      "ticker": "ZBRA",
-      "date": "2026-10-08",
-      "score": 1,
-      "close": 388.12
-    }
-  ]
+  "signals": []
 }
