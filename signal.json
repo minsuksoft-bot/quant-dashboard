@@ -1,24 +1,60 @@
 {
-  "generated_at": "2026-10-14 23:46:22",
+  "generated_at": "2026-10-15 23:34:58",
   "lookback_days": 5,
   "signals": [
     {
       "ticker": "MKTX",
-      "date": "2026-10-12",
+      "date": "2026-10-13",
       "score": 3,
-      "close": 164.5
+      "close": 164.54
+    },
+    {
+      "ticker": "CRL",
+      "date": "2026-10-13",
+      "score": 2,
+      "close": 306.24
+    },
+    {
+      "ticker": "PRCH",
+      "date": "2026-10-13",
+      "score": 2,
+      "close": 17.57
+    },
+    {
+      "ticker": "AES",
+      "date": "2026-10-13",
+      "score": 2,
+      "close": 14.97
+    },
+    {
+      "ticker": "ESTC",
+      "date": "2026-10-13",
+      "score": 2,
+      "close": 97.24
+    },
+    {
+      "ticker": "ISRG",
+      "date": "2026-10-13",
+      "score": 1,
+      "close": 427.86
+    },
+    {
+      "ticker": "IOT",
+      "date": "2026-10-13",
+      "score": 1,
+      "close": 42.59
     },
     {
       "ticker": "OLLI",
       "date": "2026-10-12",
       "score": 2,
-      "close": 93.12
+      "close": 95.56
     },
     {
       "ticker": "EXPD",
       "date": "2026-10-12",
       "score": 1,
-      "close": 196.38
+      "close": 198.64
     }
   ]
 }
