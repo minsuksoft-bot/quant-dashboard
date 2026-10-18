@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17 22:57:18",
+  "generated_at": "2026-10-18 22:52:23",
   "lookback_days": 5,
   "signals": [
     {
@@ -31,18 +31,6 @@
       "date": "2026-10-13",
       "score": 1,
       "close": 285.42
-    },
-    {
-      "ticker": "OLLI",
-      "date": "2026-10-12",
-      "score": 2,
-      "close": 93.18
-    },
-    {
-      "ticker": "EXPD",
-      "date": "2026-10-12",
-      "score": 1,
-      "close": 195.91
     }
   ]
 }
