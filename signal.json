@@ -1,36 +1,5 @@
 {
-  "generated_at": "2026-10-18 22:52:23",
+  "generated_at": "2026-10-20 00:09:36",
   "lookback_days": 5,
-  "signals": [
-    {
-      "ticker": "MKTX",
-      "date": "2026-10-14",
-      "score": 3,
-      "close": 164.64
-    },
-    {
-      "ticker": "MET",
-      "date": "2026-10-14",
-      "score": 1,
-      "close": 100.76
-    },
-    {
-      "ticker": "TEVA",
-      "date": "2026-10-14",
-      "score": 1,
-      "close": 41.5
-    },
-    {
-      "ticker": "PRCH",
-      "date": "2026-10-13",
-      "score": 2,
-      "close": 17.5
-    },
-    {
-      "ticker": "ABBV",
-      "date": "2026-10-13",
-      "score": 1,
-      "close": 285.42
-    }
-  ]
+  "signals": []
 }
