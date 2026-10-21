@@ -17,46 +17,124 @@ from sklearn.ensemble import HistGradientBoostingRegressor
 # =========================
 # APP CONFIG / STYLE
 # =========================
-st.set_page_config(page_title="QUANT SIGNAL | Factor Lab", page_icon="📈", layout="wide", initial_sidebar_state="expanded")
-st.markdown("""
+st.set_page_config(
+    page_title="QUANT SIGNAL | Factor Lab",
+    page_icon="📈",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+)
+st.markdown(r"""
 <style>
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css');
 :root { color-scheme: dark; }
-html, body, [class*="css"], [data-testid="stAppViewContainer"] {font-family:'Pretendard',sans-serif!important;}
-.stApp {background:linear-gradient(145deg,#06101f 0%,#07172b 45%,#07111e 100%); color:#eaf4ff;}
-[data-testid="stHeader"] {background:rgba(5,15,29,.92);}
-.block-container {padding-top:1.15rem!important;padding-bottom:2rem!important;padding-left:clamp(.65rem,2.5vw,2rem)!important;padding-right:clamp(.65rem,2.5vw,2rem)!important;max-width:1600px!important;}
-.main-title {font-size:clamp(1.65rem,5.4vw,2.65rem);font-weight:850;letter-spacing:-.045em;margin:0;line-height:1.2;white-space:normal;overflow-wrap:anywhere;color:#f3f8ff;}
-.sub-title {font-size:clamp(.78rem,2.5vw,1rem);color:#9db8d8;margin:.3rem 0 1.2rem;line-height:1.45;}
-.hero {background:linear-gradient(115deg,rgba(24,75,137,.96),rgba(18,153,204,.72));border:1px solid rgba(135,206,250,.35);border-radius:22px;padding:1.15rem 1.25rem;margin:.25rem 0 1.1rem;box-shadow:0 12px 34px rgba(0,0,0,.22);}
-.hero .main-title {color:#fff;}
-.hero .sub-title {color:#d9edff;margin-bottom:0;}
-h1,h2,h3 {letter-spacing:-.025em;color:#f2f7ff!important;}
-[data-testid="stSidebar"] {background:linear-gradient(180deg,#09182c,#07111f);border-right:1px solid rgba(90,165,230,.2);}
-[data-testid="stSidebar"] h2 {font-size:1.25rem;}
-[data-testid="stRadio"] > label {font-size:.82rem;color:#9eb9d8;}
-[data-testid="stRadio"] div[role="radiogroup"] {gap:.35rem;}
-[data-testid="stRadio"] div[role="radiogroup"] label {border:1px solid rgba(110,170,225,.17);border-radius:12px;padding:.55rem .65rem;background:rgba(14,36,62,.55);transition:all .15s ease;}
-[data-testid="stRadio"] div[role="radiogroup"] label:has(input:checked) {background:linear-gradient(100deg,#145ca8,#087fa8);border-color:#59c7ff;}
-.stButton>button, .stDownloadButton>button {border-radius:12px;font-weight:700;border:1px solid #2e8ac9;background:linear-gradient(110deg,#1264b0,#0786ad);color:white;min-height:2.65rem;transition:filter .15s ease,transform .15s ease;}
-.stButton>button:hover,.stDownloadButton>button:hover {filter:brightness(1.12);border-color:#8bdcff;color:white;}
-[data-testid="stMetric"] {background:rgba(13,36,62,.7);border:1px solid rgba(92,170,230,.28);padding:12px 14px;border-radius:15px;}
-[data-testid="stMetricLabel"] {color:#9fbfe0!important;}
-[data-testid="stMetricValue"] {color:#eaf7ff!important;}
-[data-testid="stDataFrame"] {width:100%;border:1px solid rgba(105,170,225,.2);border-radius:12px;overflow:hidden;}
-[data-testid="stDataFrame"] iframe {max-width:100%;}
-[data-testid="stAlert"] {border-radius:12px;}
-[data-testid="stSelectbox"] label,[data-testid="stSlider"] label {color:#b7d2ed!important;}
-hr {border-color:rgba(115,175,225,.2)!important;}
-.dashboard-card {height:100%;padding:1rem 1rem 1.1rem;border-radius:19px;background:linear-gradient(155deg,rgba(13,42,74,.94),rgba(7,22,39,.94));border:1px solid rgba(96,177,239,.28);box-shadow:0 8px 24px rgba(0,0,0,.15);}
-.dashboard-card .card-kicker {font-size:.8rem;letter-spacing:.04em;color:#69d4ff;font-weight:750;margin-bottom:.55rem;}
-.dashboard-card .card-title {font-size:1.2rem;font-weight:800;color:#f4f9ff;margin-bottom:.45rem;}
-.dashboard-card .card-desc {font-size:.92rem;color:#a9c3df;line-height:1.55;}
-@media(max-width:640px) {
-  .block-container {padding-top:.65rem!important;padding-left:.65rem!important;padding-right:.65rem!important;}
-  .hero {padding:.9rem 1rem;border-radius:17px;}
-  [data-testid="stDataFrame"] {font-size:11px!important;}
-  [data-testid="stMetric"] {padding:9px 10px;}
+html, body, [class*="css"], [data-testid="stAppViewContainer"] {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+.stApp {
+  background: radial-gradient(ellipse at 50% -20%, #142d4b 0%, #0b1421 42%, #070b12 100%);
+  color: #edf5ff;
+}
+/* Keep the app title below Streamlit's floating top bar on first load. */
+[data-testid="stHeader"] { background: rgba(7, 11, 18, .94); }
+.block-container {
+  padding-top: 3.35rem !important;
+  padding-bottom: 2.5rem !important;
+  padding-left: clamp(.7rem, 2.7vw, 2rem) !important;
+  padding-right: clamp(.7rem, 2.7vw, 2rem) !important;
+  max-width: 1500px !important;
+}
+.app-hero {
+  position: relative;
+  overflow: hidden;
+  margin: .35rem 0 1.35rem;
+  padding: 1.35rem 1.45rem 1.25rem;
+  border: 1px solid rgba(142, 173, 210, .22);
+  border-radius: 25px;
+  background: linear-gradient(125deg, rgba(40, 48, 60, .98), rgba(24, 33, 46, .98) 62%, rgba(15, 62, 95, .92));
+  box-shadow: 0 15px 42px rgba(0,0,0,.24);
+}
+.app-hero:after {
+  content: ""; position: absolute; width: 210px; height: 210px; right: -75px; top: -100px;
+  border-radius: 50%; border: 28px solid rgba(56, 189, 248, .08); pointer-events: none;
+}
+.main-title {
+  margin: 0 !important; padding: 0 !important;
+  color: #f7fbff; font-size: clamp(1.8rem, 5vw, 3.0rem);
+  line-height: 1.22; font-weight: 850; letter-spacing: -.045em;
+  white-space: normal; overflow-wrap: normal; word-break: keep-all;
+}
+.sub-title {
+  margin: .45rem 0 0 !important; color: #b5c5d8;
+  font-size: clamp(.78rem, 2.5vw, 1rem); line-height: 1.55;
+  letter-spacing: .015em;
+}
+.eyebrow { color: #73d4ff; font-size: .72rem; font-weight: 800; letter-spacing: .13em; margin-bottom: .45rem; }
+h1, h2, h3, h4 { color: #f2f7ff !important; letter-spacing: -.025em; }
+p, [data-testid="stMarkdownContainer"] { overflow-wrap: break-word; }
+[data-testid="stSidebar"] {
+  background: linear-gradient(180deg, #101c2b, #080e17);
+  border-right: 1px solid rgba(112, 176, 225, .19);
+}
+[data-testid="stSidebar"] h2 { font-size: 1.12rem; }
+[data-testid="stRadio"] > label { font-size: .78rem; color: #9cb4ce; }
+[data-testid="stRadio"] div[role="radiogroup"] { gap: .35rem; }
+[data-testid="stRadio"] div[role="radiogroup"] label {
+  border: 1px solid rgba(125, 166, 207, .16); border-radius: 11px;
+  padding: .48rem .58rem; background: rgba(17, 33, 51, .74);
+}
+[data-testid="stRadio"] div[role="radiogroup"] label:has(input:checked) {
+  background: linear-gradient(100deg, #145b91, #087eaa);
+  border-color: rgba(113, 216, 255, .72);
+}
+.stButton > button, .stDownloadButton > button {
+  width: 100%; min-height: 2.55rem; border-radius: 12px;
+  border: 1px solid rgba(96, 196, 244, .48);
+  background: linear-gradient(115deg, #12639a, #0d86ad);
+  color: #f6fbff; font-weight: 750; transition: filter .15s ease;
+}
+.stButton > button:hover, .stDownloadButton > button:hover {
+  filter: brightness(1.12); border-color: #9ce5ff; color: white;
+}
+[data-testid="stMetric"] {
+  background: linear-gradient(145deg, rgba(18, 37, 58, .92), rgba(10, 23, 37, .92));
+  border: 1px solid rgba(96, 170, 219, .24); padding: 11px 13px; border-radius: 15px;
+}
+[data-testid="stMetricLabel"] { color: #a4bad1 !important; }
+[data-testid="stMetricValue"] { color: #edf8ff !important; }
+[data-testid="stDataFrame"] {
+  width: 100%; max-width: 100%; border: 1px solid rgba(96, 170, 219, .22);
+  border-radius: 12px; overflow: hidden; background: rgba(8, 18, 30, .8);
+}
+[data-testid="stDataFrame"] iframe { max-width: 100% !important; }
+[data-testid="stAlert"] { border-radius: 12px; }
+[data-testid="stSelectbox"] label, [data-testid="stSlider"] label { color: #b8cee3 !important; }
+hr { border-color: rgba(115, 175, 225, .19) !important; }
+.menu-section-title { margin: .2rem 0 .25rem; color: #f5f9ff; font-size: 1.18rem; font-weight: 800; }
+.menu-section-note { margin: 0 0 1rem; color: #94a9bf; font-size: .88rem; line-height: 1.5; }
+/* Home cards: charcoal like the reference, with restrained blue/cyan accents. */
+[data-testid="stVerticalBlockBorderWrapper"] > div {
+  border-color: rgba(137, 163, 190, .22) !important;
+  border-radius: 19px !important;
+  background: linear-gradient(155deg, rgba(23, 31, 42, .96), rgba(10, 17, 27, .98)) !important;
+}
+.menu-card { min-height: 8.2rem; padding: .05rem .02rem .15rem; }
+.menu-icon { color: #83dcff; font-size: 1.55rem; line-height: 1.1; margin-bottom: .8rem; }
+.menu-number { color: #61c9f4; font-size: .68rem; font-weight: 850; letter-spacing: .11em; margin-bottom: .32rem; }
+.menu-title { color: #f6f9ff; font-size: clamp(.98rem, 2.6vw, 1.24rem); line-height: 1.35; font-weight: 800; margin-bottom: .42rem; }
+.menu-desc { color: #a5b3c4; font-size: clamp(.76rem, 2vw, .9rem); line-height: 1.55; min-height: 2.65rem; }
+.menu-card-button { margin-top: .5rem; }
+.page-kicker { color: #74d6ff; font-size: .72rem; font-weight: 850; letter-spacing: .13em; margin-bottom: .25rem; }
+.page-title { color: #f4f9ff; font-size: clamp(1.25rem, 3.5vw, 1.75rem); font-weight: 820; line-height: 1.3; margin-bottom: .5rem; }
+@media (max-width: 640px) {
+  .block-container { padding-top: 3.75rem !important; padding-left: .62rem !important; padding-right: .62rem !important; }
+  .app-hero { margin-top: .4rem; padding: 1.05rem 1rem 1rem; border-radius: 19px; }
+  .main-title { font-size: clamp(1.75rem, 7.2vw, 2.2rem); }
+  .sub-title { font-size: .78rem; }
+  .menu-card { min-height: 8rem; }
+  [data-testid="stMetric"] { padding: 8px 9px; }
+  [data-testid="stMetricValue"] { font-size: 1.25rem; }
+  [data-testid="stDataFrame"] { font-size: 11px !important; }
+  [data-testid="stVerticalBlockBorderWrapper"] { margin-bottom: .35rem; }
 }
 </style>
 """, unsafe_allow_html=True)
@@ -64,8 +142,6 @@ hr {border-color:rgba(115,175,225,.2)!important;}
 TICKER_SOURCE_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTgA3hs0AXyyXwkg3U6j902doYiv9U8BrwejaodapPou48w7j2jX56Zlwh4RKJFmV6wBV4TJ21U3_cF/pub?output=csv"
 BENCHMARK = "QQQ"
 DEFAULT_MAX_TICKERS = 800
-
-st.markdown('<div class="hero"><p class="main-title">QUANT SIGNAL</p><p class="sub-title">FACTOR LAB · PULLBACK SIGNALS · 800 STOCK UNIVERSE</p></div>', unsafe_allow_html=True)
 
 # =========================
 # SHARED HELPERS
@@ -336,7 +412,7 @@ def run_factor_model(max_tickers=800, history_start='2014-01-01', batch_size=25)
     return ranked.head(100), group_df, importance, bt_df, hold_df, meta
 
 # =========================
-# NAVIGATION
+# NAVIGATION / GLOBAL HEADER
 # =========================
 MENU = [
     '대시보드',
@@ -348,40 +424,132 @@ MENU = [
     '눌림목 모델 · 1개월 테스트',
     '모델 설정'
 ]
-with st.sidebar:
-    st.markdown('## QUANT SIGNAL')
-    st.caption('FACTOR LAB  /  PULLBACK')
-    page=st.radio('NAVIGATION',MENU,index=0)
-    st.divider()
-    st.caption('데이터 소스: Yahoo Finance / Google Sheets')
+PAGE_META = {
+    '대시보드': ('HOME / OVERVIEW', '리서치 대시보드', '팩터 모델과 눌림목 모델을 한 화면에서 선택하세요.'),
+    '팩터 모델 · 추천 종목': ('FACTOR MODEL / RANKING', '팩터 모델 · 추천 종목', '팩터 점수를 기준으로 종목 후보를 정렬합니다.'),
+    '팩터 모델 · 팩터 분석': ('FACTOR MODEL / ATTRIBUTION', '팩터 분석', '모델의 변수 중요도와 종목별 팩터 기여도를 확인합니다.'),
+    '팩터 모델 · 백테스트': ('FACTOR MODEL / BACKTEST', '팩터 모델 · 백테스트', '과거 워크포워드 성과를 QQQ와 비교합니다.'),
+    '팩터 모델 · 개별 종목': ('FACTOR MODEL / STOCK DETAIL', '개별 종목 분석', '선택한 종목의 예측값과 팩터 기여도를 확인합니다.'),
+    '눌림목 모델 · 실시간 신호': ('PULLBACK MODEL / LIVE', '눌림목 모델 · 실시간 신호', '현재 가격 데이터에서 눌림목 조건을 검색합니다.'),
+    '눌림목 모델 · 1개월 테스트': ('PULLBACK MODEL / TEST', '눌림목 모델 · 1개월 테스트', '최근 한 달 구간의 눌림목 신호와 이후 최고수익률을 확인합니다.'),
+    '모델 설정': ('CONFIGURATION / DATA', '모델 설정', '종목 수, 가격 데이터 시작일, 수집 묶음 크기를 조정합니다.'),
+}
 
-if 'factor_results' not in st.session_state: st.session_state.factor_results=None
-if 'pullback_results' not in st.session_state: st.session_state.pullback_results=None
+if 'page' not in st.session_state:
+    st.session_state.page = '대시보드'
+if 'factor_results' not in st.session_state:
+    st.session_state.factor_results = None
+if 'pullback_results' not in st.session_state:
+    st.session_state.pullback_results = None
+
+# Show the sidebar only within a functional page, not on the home menu.
+if st.session_state.page != '대시보드':
+    with st.sidebar:
+        st.markdown('## QUANT SIGNAL')
+        st.caption('FACTOR LAB  /  PULLBACK')
+        if st.button('⌂  홈 대시보드', key='nav_home', use_container_width=True):
+            st.session_state.page = '대시보드'
+            st.session_state.pop('page_radio', None)
+            st.rerun()
+        st.divider()
+        selected_page = st.radio('MENU', MENU[1:], index=(MENU[1:].index(st.session_state.page) if st.session_state.page in MENU[1:] else 0), key='page_radio')
+        if selected_page != st.session_state.page:
+            st.session_state.page = selected_page
+            st.rerun()
+        st.divider()
+        st.caption('데이터: Yahoo Finance / Google Sheets')
+page = st.session_state.page
+
+# Header lives in normal document flow with generous top padding so it is not
+# hidden behind the fixed Streamlit toolbar when the page first opens.
+st.markdown(
+    '<div class="app-hero">'
+    '<div class="eyebrow">QUANTITATIVE RESEARCH WORKSPACE</div>'
+    '<div class="main-title">QUANT SIGNAL</div>'
+    '<div class="sub-title">FACTOR LAB  ·  PULLBACK SIGNALS  ·  800 STOCK UNIVERSE</div>'
+    '</div>',
+    unsafe_allow_html=True,
+)
+
+def render_page_heading(page_name):
+    kicker, title, note = PAGE_META[page_name]
+    st.markdown(f'<div class="page-kicker">{kicker}</div><div class="page-title">{title}</div><div class="menu-section-note">{note}</div>', unsafe_allow_html=True)
+
+def show_stable_table(data, height=360, column_width='small'):
+    """Fixed-height, compact tables reduce page jumps and horizontal overflow."""
+    if data is None:
+        st.info('표시할 데이터가 없습니다.')
+        return
+    view = data.copy()
+    config = {}
+    for col in view.columns:
+        dtype = view[col].dtype
+        if pd.api.types.is_numeric_dtype(dtype):
+            config[col] = st.column_config.NumberColumn(str(col), width=column_width)
+        else:
+            config[col] = st.column_config.TextColumn(str(col), width=column_width)
+    st.dataframe(
+        view,
+        use_container_width=True,
+        hide_index=True,
+        height=height,
+        row_height=32,
+        column_config=config,
+    )
 
 # =========================
 # PAGES
 # =========================
-if page=='대시보드':
-    st.subheader('Research Dashboard')
-    st.markdown('팩터 기반 종목 선별과 기존 눌림목 신호를 독립적으로 운영합니다. 아래에서 모델을 실행하거나 왼쪽 메뉴에서 분석 페이지로 이동하세요.')
-    f=st.session_state.factor_results; p=st.session_state.pullback_results
-    c1,c2=st.columns(2)
-    with c1:
-        st.markdown('<div class="dashboard-card"><div class="card-kicker">01 / QUANTITATIVE RANKING</div><div class="card-title">팩터 모델</div><div class="card-desc">모멘텀 · 추세 · 리스크 · 유동성 기반 추천 종목과 백테스트</div></div>', unsafe_allow_html=True)
+if page == '대시보드':
+    render_page_heading('대시보드')
+    st.markdown('<div class="menu-section-title">메뉴 바로가기</div><div class="menu-section-note">원하는 분석 화면을 선택하세요. 세부 화면에 들어가면 왼쪽 메뉴에서 이동할 수 있습니다.</div>', unsafe_allow_html=True)
+    f = st.session_state.factor_results
+    p = st.session_state.pullback_results
+    menu_cards = [
+        ('01', '⌂', '대시보드', '모델 실행 상태와 최근 분석 결과를 확인합니다.', '대시보드'),
+        ('02', '↗', '추천 종목', '팩터 점수 상위 종목과 예상 초과수익률을 확인합니다.', '팩터 모델 · 추천 종목'),
+        ('03', '◈', '팩터 분석', '팩터 중요도와 종목별 기여도를 분석합니다.', '팩터 모델 · 팩터 분석'),
+        ('04', '▥', '백테스트', 'QQQ 비교, 누적수익률, 낙폭과 테스트 기록을 봅니다.', '팩터 모델 · 백테스트'),
+        ('05', '⌕', '개별 종목 분석', '선택한 종목의 예측값과 팩터별 근거를 확인합니다.', '팩터 모델 · 개별 종목'),
+        ('06', '⌁', '눌림목 실시간 신호', '이동평균 정배열 기반의 현재 신호를 검색합니다.', '눌림목 모델 · 실시간 신호'),
+        ('07', '◷', '눌림목 1개월 테스트', '최근 한 달 신호와 이후 최고수익률을 확인합니다.', '눌림목 모델 · 1개월 테스트'),
+        ('08', '⚙', '모델 설정', '분석 종목 수와 가격 데이터 수집 범위를 조정합니다.', '모델 설정'),
+    ]
+    for row_start in range(0, len(menu_cards), 2):
+        cols = st.columns(2, gap='medium')
+        for col, item in zip(cols, menu_cards[row_start:row_start+2]):
+            num, icon, title, desc, target = item
+            with col:
+                with st.container(border=True):
+                    st.markdown(
+                        f'<div class="menu-card"><div class="menu-icon">{icon}</div>'
+                        f'<div class="menu-number">{num} / QUANT SIGNAL</div>'
+                        f'<div class="menu-title">{title}</div><div class="menu-desc">{desc}</div></div>',
+                        unsafe_allow_html=True,
+                    )
+                    if target == '대시보드':
+                        open_clicked = st.button('현재 상태 보기  ↗', key='home_open_'+num, use_container_width=True)
+                    else:
+                        open_clicked = st.button('메뉴 열기  ↗', key='home_open_'+num, use_container_width=True)
+                    if open_clicked:
+                        st.session_state.page = target
+                        st.session_state.pop('page_radio', None)
+                        st.rerun()
+    # Compact operational status instead of a separate quick-launch sidebar.
+    st.markdown('### 최근 실행 상태')
+    status_cols = st.columns(2)
+    with status_cols[0]:
+        st.metric('팩터 모델', '실행 완료' if f else '대기 중')
         if f:
-            st.metric('추천 후보',f['meta']['eligible_candidates']); st.caption(f"마지막 분석: {f['meta']['as_of']}")
-        else: st.info('아직 실행된 팩터 분석이 없습니다.')
-        if st.button('팩터 모델 실행',key='dash_factor'): st.session_state['run_factor']=True; st.rerun()
-    with c2:
-        st.markdown('<div class="dashboard-card"><div class="card-kicker">02 / TECHNICAL SETUP</div><div class="card-title">눌림목 모델</div><div class="card-desc">이동평균 정배열과 눌림목 조건을 이용한 실시간 신호 및 과거 테스트</div></div>', unsafe_allow_html=True)
+            st.caption(f"기준일 {f['meta'].get('as_of', 'N/A')} · 적격 후보 {f['meta'].get('eligible_candidates', 0)}개")
+    with status_cols[1]:
+        st.metric('눌림목 모델', '실행 완료' if p else '대기 중')
         if p:
-            st.metric('현재 신호',len(p[0])); st.caption('최근 실행 결과')
-        else: st.info('아직 실행된 눌림목 분석이 없습니다.')
-        if st.button('눌림목 모델 실행',key='dash_pullback'): st.session_state['run_pullback']=True; st.rerun()
-    st.warning('모델 예측은 투자 권유나 수익 보장이 아닙니다. 팩터 모델은 가격 데이터 기반이며 생존편향이 남을 수 있습니다.')
+            st.caption(f'최근 신호 {len(p[0])}개')
+    st.caption('참고: 모델 예측은 투자 권유나 수익 보장이 아닙니다. 팩터 모델은 가격 데이터 기반이며 현재 종목 유니버스 사용에 따른 생존편향 가능성이 있습니다.')
 
 if page=='모델 설정':
-    st.subheader('모델 설정')
+    render_page_heading('모델 설정')
     st.markdown('### 분석 범위')
     st.write('팩터 모델과 눌림목 모델의 종목 수는 기본 800개입니다. 팩터 모델은 장기 가격 데이터를 필요로 하므로 첫 실행에 시간이 걸릴 수 있습니다.')
     max_tickers=st.select_slider('검토 종목 수',options=[100,200,400,600,800],value=800)
@@ -419,7 +587,7 @@ if st.session_state.pop('run_pullback',False):
     except Exception as e: st.error(f'눌림목 모델 실행 실패: {e}')
 
 if page=='팩터 모델 · 추천 종목':
-    st.subheader('Factor Model · Recommendations')
+    render_page_heading('팩터 모델 · 추천 종목')
     if st.button('팩터 모델 실행 / 갱신',key='factor_run_recs'):
         settings=st.session_state.get('settings',{'max_tickers':800,'history_start':'2014-01-01','batch_size':25})
         try:
@@ -435,28 +603,34 @@ if page=='팩터 모델 · 추천 종목':
         show=df[['순위','Ticker','Close','ADV20','예상 초과수익률(63일)','Ridge 예측','트리 예측']].copy()
         for c in ['예상 초과수익률(63일)','Ridge 예측','트리 예측']: show[c]=show[c].map(lambda x:f'{x:.2%}')
         show=show.rename(columns={'Ticker':'종목','Close':'현재가','ADV20':'평균 거래대금(USD)'})
-        st.dataframe(show.head(st.selectbox('표시 종목 수',[20,30,50,100],index=0)),use_container_width=True,hide_index=True,height=420)
+        display_count = st.selectbox('표시 종목 수', [20, 30, 50, 100], index=0)
+        # Keep the default table narrow enough for mobile: detailed model outputs remain in CSV.
+        compact = show[['순위', '종목', '현재가', '예상 초과수익률(63일)', '평균 거래대금(USD)']].head(display_count).copy()
+        compact['평균거래대금($M)'] = (pd.to_numeric(compact.pop('평균 거래대금(USD)'), errors='coerce') / 1_000_000).map(lambda x: f'{x:,.0f}' if pd.notna(x) else '—')
+        compact = compact.rename(columns={'예상 초과수익률(63일)': '예상 초과(63일)'})
+        compact['현재가'] = pd.to_numeric(compact['현재가'], errors='coerce').map(lambda x: f'${x:,.2f}' if pd.notna(x) else '—')
+        show_stable_table(compact, height=360)
         st.download_button('추천 종목 CSV 다운로드',df.to_csv(index=False).encode('utf-8-sig'),'factor_recommendations.csv','text/csv')
     else: st.info('먼저 대시보드 또는 이 페이지에서 팩터 모델을 실행하세요.')
 
 if page=='팩터 모델 · 팩터 분석':
-    st.subheader('Factor Model · Attribution')
+    render_page_heading('팩터 모델 · 팩터 분석')
     f=st.session_state.factor_results
     if not f: st.info('먼저 팩터 모델을 실행하세요.')
     else:
         st.markdown('### 전체 변수 중요도')
-        st.dataframe(f['importance'],use_container_width=True,hide_index=True,height=420)
+        show_stable_table(f['importance'].rename(columns={'Ridge 절대계수': 'Ridge 계수'}), height=360)
         st.bar_chart(f['importance'].head(12).set_index('팩터'))
         st.markdown('### 종목별 팩터 그룹 기여도')
         tickers=f['ranked'].Ticker.tolist()
         chosen=st.selectbox('종목 선택',tickers)
         gd=f['groups'][f['groups'].Ticker==chosen].set_index('팩터 그룹')
         st.bar_chart(gd[['Ridge 기여도']])
-        st.dataframe(gd,use_container_width=True,height=360)
+        show_stable_table(gd.drop(columns=['Ticker'], errors='ignore').reset_index(), height=300)
         st.caption('기여도는 Ridge 선형 구성요소만 반영합니다. 트리 모델의 비선형 효과를 완전히 분해한 값은 아닙니다. 글로벌 중요도는 모델 전체의 인과적 효과를 뜻하지 않습니다.')
 
 if page=='팩터 모델 · 백테스트':
-    st.subheader('Factor Model · Backtest')
+    render_page_heading('팩터 모델 · 백테스트')
     f=st.session_state.factor_results
     if not f: st.info('먼저 팩터 모델을 실행하세요.')
     else:
@@ -470,12 +644,13 @@ if page=='팩터 모델 · 백테스트':
             plot['Portfolio cumulative']=(1+plot.PortfolioReturn).cumprod()-1
             plot['QQQ cumulative']=(1+plot.BenchmarkReturn).cumprod()-1
             st.line_chart(plot[['Portfolio cumulative','QQQ cumulative']])
-            st.dataframe(bt,use_container_width=True,hide_index=True,height=420)
+            bt_view = bt.rename(columns={'SignalDate': '기준일', 'PortfolioReturn': '전략수익률', 'BenchmarkReturn': 'QQQ 수익률', 'ExcessReturn': '초과수익률', 'Holdings': '보유수'})
+            show_stable_table(bt_view, height=360)
             st.download_button('백테스트 CSV 다운로드',bt.to_csv(index=False).encode('utf-8-sig'),'factor_backtest.csv','text/csv')
             st.caption('주의: 현재 유니버스 기반 과거 재구성은 생존편향이 남을 수 있습니다. 비용은 단순 10bp 가정이며, 배당/체결/시장충격 등을 완전히 반영하지 않습니다.')
 
 if page=='팩터 모델 · 개별 종목':
-    st.subheader('Factor Model · Stock Detail')
+    render_page_heading('팩터 모델 · 개별 종목')
     f=st.session_state.factor_results
     if not f: st.info('먼저 팩터 모델을 실행하세요.')
     else:
@@ -483,11 +658,11 @@ if page=='팩터 모델 · 개별 종목':
         row=f['ranked'][f['ranked'].Ticker==ticker].iloc[0]
         a,b,c=st.columns(3); a.metric('현재가',f"${row.Close:.2f}"); b.metric('예상 초과수익률',f"{row['예상 초과수익률(63일)']:.2%}"); c.metric('랭킹',f"#{alltick.index(ticker)+1}")
         gd=f['groups'][f['groups'].Ticker==ticker].sort_values('Ridge 기여도',ascending=False)
-        st.markdown('### 팩터 그룹 기여도'); st.bar_chart(gd.set_index('팩터 그룹')[['Ridge 기여도']]); st.dataframe(gd,use_container_width=True,hide_index=True,height=420)
+        st.markdown('### 팩터 그룹 기여도'); st.bar_chart(gd.set_index('팩터 그룹')[['Ridge 기여도']]); show_stable_table(gd.drop(columns=['Ticker'], errors='ignore'), height=340)
         st.caption('현재 가격 팩터 모델의 상대적 예측 결과이며 목표주가나 수익 보장이 아닙니다. 재무제표·애널리스트 전망 수정 팩터는 포함되지 않았습니다.')
 
 if page in ('눌림목 모델 · 실시간 신호','눌림목 모델 · 1개월 테스트'):
-    st.subheader('Pullback Model · '+('Live Signals' if page.endswith('실시간 신호') else '1-Month Test'))
+    render_page_heading(page)
     if st.button('눌림목 분석 실행 / 갱신',key='pullback_run_'+page):
         settings=st.session_state.get('settings',{'max_tickers':800})
         try:
@@ -501,7 +676,8 @@ if page in ('눌림목 모델 · 실시간 신호','눌림목 모델 · 1개월 
         data=live if page.endswith('실시간 신호') else past
         if data.empty: st.info('현재 조건에 부합하는 종목이 없습니다.')
         else:
-            st.dataframe(data,use_container_width=True,hide_index=True,height=420)
+            data_view = data.rename(columns={'발생일': '발생일', '종목': '종목', '현재가': '현재가', '눌림목 점수': '점수', '이후 최고수익률(%)': '이후 최고(%)'})
+            show_stable_table(data_view, height=360)
             st.download_button('현재 표 CSV 다운로드',data.to_csv(index=False).encode('utf-8-sig'),'pullback_signals.csv','text/csv')
         if page.endswith('1개월 테스트'):
             st.warning('이 테스트의 최고수익률은 신호 발생 후 현재까지의 최고가를 사용하므로, 실제 체결 가능한 수익률과 다릅니다. 향후 고가를 이용한 성과는 매도 시점을 사전에 알 수 없다는 한계가 있습니다.')
@@ -509,4 +685,4 @@ if page in ('눌림목 모델 · 실시간 신호','눌림목 모델 · 1개월 
 
 # footer
 st.divider()
-st.caption('QUANT SIGNAL · Research tool only · Predictions are uncertain and not investment advice.')
+st.caption('QUANT SIGNAL  ·  Research tool only  ·  Predictions are uncertain and not investment advice.')
