@@ -91,6 +91,23 @@ hr { border-color:#d8e5f1 !important; }
 .menu-desc { color:#617990; font-size:clamp(.76rem,2vw,.9rem); line-height:1.55; min-height:2.65rem; }
 .page-title { color:#203f5b; font-size:clamp(1.25rem,3.5vw,1.75rem); font-weight:820; line-height:1.3; margin-bottom:.5rem; }
 
+/* Home screen: each menu is one cohesive blue button/card. */
+.home-section-title { margin:1.15rem 0 .35rem; color:#214b6c; font-size:1.28rem; font-weight:850; letter-spacing:-.025em; }
+.home-section-note { margin:0 0 .85rem; color:#667f96; font-size:.88rem; line-height:1.5; }
+.st-key-home_card button {
+  width:100% !important; min-height:9.4rem !important; height:9.4rem !important;
+  display:flex !important; align-items:flex-start !important; justify-content:center !important;
+  text-align:left !important; white-space:pre-wrap !important;
+  padding:1rem 1rem !important; border-radius:18px !important;
+  border:1px solid #9bc9e8 !important;
+  background:linear-gradient(135deg,#e6f5ff 0%,#d7edff 100%) !important;
+  color:#1d496c !important; box-shadow:0 5px 15px rgba(50,105,150,.07) !important;
+  line-height:1.45 !important; overflow:hidden !important;
+}
+.st-key-home_card button p { margin:0 !important; text-align:left !important; }
+.st-key-home_card button:hover { border-color:#4ba8dc !important; background:linear-gradient(135deg,#d9f0ff,#c8e7ff) !important; }
+.st-key-home_card button:focus { box-shadow:0 0 0 .15rem rgba(65,157,211,.22) !important; }
+
 /* Force the home menu to remain a true two-column grid on phones.
    Streamlit normally stacks columns on narrow screens; only rows containing
    menu cards are overridden, so tables and detail pages remain responsive. */
@@ -120,6 +137,8 @@ hr { border-color:#d8e5f1 !important; }
   .main-title { font-size:clamp(1.75rem,7.2vw,2.2rem); }
   .sub-title { font-size:.78rem; }
   .menu-card { min-height:8.6rem; padding:0; }
+  .st-key-home_card button { min-height:9rem !important; height:9rem !important; padding:.82rem !important; font-size:.88rem !important; }
+  .home-section-title { font-size:1.15rem; }
   [data-testid="stVerticalBlockBorderWrapper"]:has(.menu-card),
   [data-testid="stVerticalBlockBorderWrapper"]:has(.menu-card) > div { min-height:13.2rem; height:100%; }
   .menu-desc { min-height:3.2rem; font-size:.76rem; }
@@ -495,39 +514,43 @@ def show_stable_table(data, height=360, column_width='small'):
 # PAGES
 # =========================
 if page == '대시보드':
-    st.markdown('<div class="menu-section-title">분석 메뉴</div><div class="menu-section-note">원하는 기능을 선택하세요. 각 카드는 동일한 높이의 2열 레이아웃으로 배치했습니다.</div>', unsafe_allow_html=True)
     f = st.session_state.factor_results
     p = st.session_state.pullback_results
-    menu_cards = [
-        ('01', '⌂', '대시보드', '모델 실행 상태와 최근 분석 결과를 확인합니다.', '대시보드'),
-        ('02', '↗', '추천 종목', '팩터 점수 상위 종목과 예상 초과수익률을 확인합니다.', '팩터 모델 · 추천 종목'),
-        ('03', '◈', '팩터 분석', '팩터 중요도와 종목별 기여도를 분석합니다.', '팩터 모델 · 팩터 분석'),
-        ('04', '▥', '백테스트', 'QQQ 비교, 누적수익률, 낙폭과 테스트 기록을 봅니다.', '팩터 모델 · 백테스트'),
-        ('05', '⌕', '개별 종목 분석', '선택한 종목의 예측값과 팩터별 근거를 확인합니다.', '팩터 모델 · 개별 종목'),
-        ('06', '⌁', '눌림목 실시간 신호', '이동평균 정배열 기반의 현재 신호를 검색합니다.', '눌림목 모델 · 실시간 신호'),
-        ('07', '◷', '눌림목 1개월 테스트', '최근 한 달 신호와 이후 최고수익률을 확인합니다.', '눌림목 모델 · 1개월 테스트'),
-        ('08', '⚙', '모델 설정', '분석 종목 수와 가격 데이터 수집 범위를 조정합니다.', '모델 설정'),
+
+    st.markdown('<div class="home-section-title">팩터 모델</div><div class="home-section-note">가격 기반 팩터 점수, 종목 추천, 기여도와 백테스트를 확인합니다.</div>', unsafe_allow_html=True)
+    factor_cards = [
+        ('대시보드', '모델 실행 상태와 최근 분석 결과를 확인합니다.', '대시보드'),
+        ('추천 종목', '팩터 점수 상위 종목과 예상 초과수익률을 확인합니다.', '팩터 모델 · 추천 종목'),
+        ('팩터 분석', '팩터 중요도와 종목별 기여도를 분석합니다.', '팩터 모델 · 팩터 분석'),
+        ('백테스트', 'QQQ 비교, 누적수익률, 낙폭과 테스트 기록을 봅니다.', '팩터 모델 · 백테스트'),
+        ('개별 종목 분석', '선택한 종목의 예측값과 팩터별 근거를 확인합니다.', '팩터 모델 · 개별 종목'),
+        ('모델 설정', '분석 종목 수와 가격 데이터 수집 범위를 조정합니다.', '모델 설정'),
     ]
-    for row_start in range(0, len(menu_cards), 2):
+    for row_start in range(0, len(factor_cards), 2):
         cols = st.columns(2, gap='medium')
-        for col, item in zip(cols, menu_cards[row_start:row_start+2]):
-            num, icon, title, desc, target = item
+        for idx, (col, item) in enumerate(zip(cols, factor_cards[row_start:row_start+2]), start=row_start):
+            title, desc, target = item
             with col:
-                with st.container(border=True):
-                    st.markdown(
-                        f'<div class="menu-card"><div class="menu-icon">{icon}</div>'
-                        f'<div class="menu-number">{num} / QUANT SIGNAL</div>'
-                        f'<div class="menu-title">{title}</div><div class="menu-desc">{desc}</div></div>',
-                        unsafe_allow_html=True,
-                    )
-                    if target == '대시보드':
-                        open_clicked = st.button('현재 상태 보기  ↗', key='home_open_'+num, use_container_width=True)
-                    else:
-                        open_clicked = st.button('메뉴 열기  ↗', key='home_open_'+num, use_container_width=True)
-                    if open_clicked:
-                        st.session_state.page = target
-                        st.session_state.pop('page_radio', None)
-                        st.rerun()
+                label = f'**{title}**\n\n{desc}'
+                if st.button(label, key=f'home_card_factor_{idx}', use_container_width=True):
+                    st.session_state.page = target
+                    st.session_state.pop('page_radio', None)
+                    st.rerun()
+
+    st.markdown('<div class="home-section-title">테크니컬 모델</div><div class="home-section-note">이동평균과 가격 움직임을 이용한 눌림목 신호 및 테스트를 확인합니다.</div>', unsafe_allow_html=True)
+    technical_cards = [
+        ('눌림목 실시간 신호', '이동평균 정배열 기반의 현재 신호를 검색합니다.', '눌림목 모델 · 실시간 신호'),
+        ('눌림목 1개월 테스트', '최근 한 달 신호와 이후 최고수익률을 확인합니다.', '눌림목 모델 · 1개월 테스트'),
+    ]
+    cols = st.columns(2, gap='medium')
+    for idx, (col, item) in enumerate(zip(cols, technical_cards)):
+        title, desc, target = item
+        with col:
+            label = f'**{title}**\n\n{desc}'
+            if st.button(label, key=f'home_card_technical_{idx}', use_container_width=True):
+                st.session_state.page = target
+                st.session_state.pop('page_radio', None)
+                st.rerun()
     # Compact operational status instead of a separate quick-launch sidebar.
     st.markdown('### 최근 실행 상태')
     status_cols = st.columns(2)
