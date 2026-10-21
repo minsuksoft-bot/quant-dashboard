@@ -242,6 +242,52 @@ hr { border-color:#d8e5f1 !important; }
   }
 }
 
+
+/* BALANCED HOME GRID: equal left/right page margins on mobile. */
+@media (max-width: 640px) {
+  .block-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  [data-testid="stVerticalBlock"] {
+    min-width: 0 !important;
+  }
+  [data-testid="stHorizontalBlock"]:has([class*="st-key-home_card_factor_"]),
+  [data-testid="stHorizontalBlock"]:has([class*="st-key-home_card_technical_"]) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: .75rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  [data-testid="stHorizontalBlock"]:has([class*="st-key-home_card_factor_"]) > [data-testid="stColumn"],
+  [data-testid="stHorizontalBlock"]:has([class*="st-key-home_card_technical_"]) > [data-testid="stColumn"],
+  [data-testid="stHorizontalBlock"]:has([class*="st-key-home_card_factor_"]) > [data-testid="column"],
+  [data-testid="stHorizontalBlock"]:has([class*="st-key-home_card_technical_"]) > [data-testid="column"] {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: initial !important;
+  }
+  [class*="st-key-home_card_factor_"] button,
+  [class*="st-key-home_card_technical_"] button {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
 </style>
 """, unsafe_allow_html=True)
 
