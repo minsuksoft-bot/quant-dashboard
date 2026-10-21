@@ -17,17 +17,47 @@ from sklearn.ensemble import HistGradientBoostingRegressor
 # =========================
 # APP CONFIG / STYLE
 # =========================
-st.set_page_config(page_title="QUANT SIGNAL | Factor Lab", page_icon="⬛", layout="centered")
+st.set_page_config(page_title="QUANT SIGNAL | Factor Lab", page_icon="📈", layout="wide", initial_sidebar_state="expanded")
 st.markdown("""
 <style>
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css');
-html, body, [class*="css"] {font-family:'Pretendard',sans-serif!important;}
-.block-container {padding-top:1.2rem!important;padding-left:.8rem!important;padding-right:.8rem!important;max-width:100vw!important;}
-.main-title {font-size:2rem;font-weight:850;letter-spacing:-.04em;margin-bottom:0;}
-.sub-title {font-size:.9rem;color:#777;margin-bottom:1rem;}
-.stButton>button {border-radius:9px;font-weight:650;width:100%;}
-div[data-testid="stMetric"] {border:1px solid #eee;padding:12px;border-radius:12px;}
-[data-testid="stDataFrame"] {width:100%;}
+:root { color-scheme: dark; }
+html, body, [class*="css"], [data-testid="stAppViewContainer"] {font-family:'Pretendard',sans-serif!important;}
+.stApp {background:linear-gradient(145deg,#06101f 0%,#07172b 45%,#07111e 100%); color:#eaf4ff;}
+[data-testid="stHeader"] {background:rgba(5,15,29,.92);}
+.block-container {padding-top:1.15rem!important;padding-bottom:2rem!important;padding-left:clamp(.65rem,2.5vw,2rem)!important;padding-right:clamp(.65rem,2.5vw,2rem)!important;max-width:1600px!important;}
+.main-title {font-size:clamp(1.65rem,5.4vw,2.65rem);font-weight:850;letter-spacing:-.045em;margin:0;line-height:1.2;white-space:normal;overflow-wrap:anywhere;color:#f3f8ff;}
+.sub-title {font-size:clamp(.78rem,2.5vw,1rem);color:#9db8d8;margin:.3rem 0 1.2rem;line-height:1.45;}
+.hero {background:linear-gradient(115deg,rgba(24,75,137,.96),rgba(18,153,204,.72));border:1px solid rgba(135,206,250,.35);border-radius:22px;padding:1.15rem 1.25rem;margin:.25rem 0 1.1rem;box-shadow:0 12px 34px rgba(0,0,0,.22);}
+.hero .main-title {color:#fff;}
+.hero .sub-title {color:#d9edff;margin-bottom:0;}
+h1,h2,h3 {letter-spacing:-.025em;color:#f2f7ff!important;}
+[data-testid="stSidebar"] {background:linear-gradient(180deg,#09182c,#07111f);border-right:1px solid rgba(90,165,230,.2);}
+[data-testid="stSidebar"] h2 {font-size:1.25rem;}
+[data-testid="stRadio"] > label {font-size:.82rem;color:#9eb9d8;}
+[data-testid="stRadio"] div[role="radiogroup"] {gap:.35rem;}
+[data-testid="stRadio"] div[role="radiogroup"] label {border:1px solid rgba(110,170,225,.17);border-radius:12px;padding:.55rem .65rem;background:rgba(14,36,62,.55);transition:all .15s ease;}
+[data-testid="stRadio"] div[role="radiogroup"] label:has(input:checked) {background:linear-gradient(100deg,#145ca8,#087fa8);border-color:#59c7ff;}
+.stButton>button, .stDownloadButton>button {border-radius:12px;font-weight:700;border:1px solid #2e8ac9;background:linear-gradient(110deg,#1264b0,#0786ad);color:white;min-height:2.65rem;transition:filter .15s ease,transform .15s ease;}
+.stButton>button:hover,.stDownloadButton>button:hover {filter:brightness(1.12);border-color:#8bdcff;color:white;}
+[data-testid="stMetric"] {background:rgba(13,36,62,.7);border:1px solid rgba(92,170,230,.28);padding:12px 14px;border-radius:15px;}
+[data-testid="stMetricLabel"] {color:#9fbfe0!important;}
+[data-testid="stMetricValue"] {color:#eaf7ff!important;}
+[data-testid="stDataFrame"] {width:100%;border:1px solid rgba(105,170,225,.2);border-radius:12px;overflow:hidden;}
+[data-testid="stDataFrame"] iframe {max-width:100%;}
+[data-testid="stAlert"] {border-radius:12px;}
+[data-testid="stSelectbox"] label,[data-testid="stSlider"] label {color:#b7d2ed!important;}
+hr {border-color:rgba(115,175,225,.2)!important;}
+.dashboard-card {height:100%;padding:1rem 1rem 1.1rem;border-radius:19px;background:linear-gradient(155deg,rgba(13,42,74,.94),rgba(7,22,39,.94));border:1px solid rgba(96,177,239,.28);box-shadow:0 8px 24px rgba(0,0,0,.15);}
+.dashboard-card .card-kicker {font-size:.8rem;letter-spacing:.04em;color:#69d4ff;font-weight:750;margin-bottom:.55rem;}
+.dashboard-card .card-title {font-size:1.2rem;font-weight:800;color:#f4f9ff;margin-bottom:.45rem;}
+.dashboard-card .card-desc {font-size:.92rem;color:#a9c3df;line-height:1.55;}
+@media(max-width:640px) {
+  .block-container {padding-top:.65rem!important;padding-left:.65rem!important;padding-right:.65rem!important;}
+  .hero {padding:.9rem 1rem;border-radius:17px;}
+  [data-testid="stDataFrame"] {font-size:11px!important;}
+  [data-testid="stMetric"] {padding:9px 10px;}
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -35,8 +65,7 @@ TICKER_SOURCE_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTgA3hs0AXy
 BENCHMARK = "QQQ"
 DEFAULT_MAX_TICKERS = 800
 
-st.markdown('<p class="main-title">QUANT SIGNAL</p>', unsafe_allow_html=True)
-st.markdown('<p class="sub-title">NASDAQ FACTOR LAB · Technical Signals · Mobile-first</p>', unsafe_allow_html=True)
+st.markdown('<div class="hero"><p class="main-title">QUANT SIGNAL</p><p class="sub-title">FACTOR LAB · PULLBACK SIGNALS · 800 STOCK UNIVERSE</p></div>', unsafe_allow_html=True)
 
 # =========================
 # SHARED HELPERS
@@ -321,8 +350,8 @@ MENU = [
 ]
 with st.sidebar:
     st.markdown('## QUANT SIGNAL')
-    st.caption('Factor Model + Pullback Model')
-    page=st.radio('페이지 메뉴',MENU,index=0)
+    st.caption('FACTOR LAB  /  PULLBACK')
+    page=st.radio('NAVIGATION',MENU,index=0)
     st.divider()
     st.caption('데이터 소스: Yahoo Finance / Google Sheets')
 
@@ -333,18 +362,18 @@ if 'pullback_results' not in st.session_state: st.session_state.pullback_results
 # PAGES
 # =========================
 if page=='대시보드':
-    st.subheader('Market Research Dashboard')
-    st.write('팩터 모델과 기존 눌림목 모델을 분리해 운영합니다. 각 분석은 해당 메뉴에서 실행할 수 있습니다.')
+    st.subheader('Research Dashboard')
+    st.markdown('팩터 기반 종목 선별과 기존 눌림목 신호를 독립적으로 운영합니다. 아래에서 모델을 실행하거나 왼쪽 메뉴에서 분석 페이지로 이동하세요.')
     f=st.session_state.factor_results; p=st.session_state.pullback_results
     c1,c2=st.columns(2)
     with c1:
-        st.markdown('### Factor Model')
+        st.markdown('<div class="dashboard-card"><div class="card-kicker">01 / QUANTITATIVE RANKING</div><div class="card-title">팩터 모델</div><div class="card-desc">모멘텀 · 추세 · 리스크 · 유동성 기반 추천 종목과 백테스트</div></div>', unsafe_allow_html=True)
         if f:
             st.metric('추천 후보',f['meta']['eligible_candidates']); st.caption(f"마지막 분석: {f['meta']['as_of']}")
         else: st.info('아직 실행된 팩터 분석이 없습니다.')
         if st.button('팩터 모델 실행',key='dash_factor'): st.session_state['run_factor']=True; st.rerun()
     with c2:
-        st.markdown('### Pullback Model')
+        st.markdown('<div class="dashboard-card"><div class="card-kicker">02 / TECHNICAL SETUP</div><div class="card-title">눌림목 모델</div><div class="card-desc">이동평균 정배열과 눌림목 조건을 이용한 실시간 신호 및 과거 테스트</div></div>', unsafe_allow_html=True)
         if p:
             st.metric('현재 신호',len(p[0])); st.caption('최근 실행 결과')
         else: st.info('아직 실행된 눌림목 분석이 없습니다.')
@@ -406,7 +435,7 @@ if page=='팩터 모델 · 추천 종목':
         show=df[['순위','Ticker','Close','ADV20','예상 초과수익률(63일)','Ridge 예측','트리 예측']].copy()
         for c in ['예상 초과수익률(63일)','Ridge 예측','트리 예측']: show[c]=show[c].map(lambda x:f'{x:.2%}')
         show=show.rename(columns={'Ticker':'종목','Close':'현재가','ADV20':'평균 거래대금(USD)'})
-        st.dataframe(show.head(st.selectbox('표시 종목 수',[20,30,50,100],index=0)),use_container_width=True,hide_index=True)
+        st.dataframe(show.head(st.selectbox('표시 종목 수',[20,30,50,100],index=0)),use_container_width=True,hide_index=True,height=420)
         st.download_button('추천 종목 CSV 다운로드',df.to_csv(index=False).encode('utf-8-sig'),'factor_recommendations.csv','text/csv')
     else: st.info('먼저 대시보드 또는 이 페이지에서 팩터 모델을 실행하세요.')
 
@@ -416,14 +445,14 @@ if page=='팩터 모델 · 팩터 분석':
     if not f: st.info('먼저 팩터 모델을 실행하세요.')
     else:
         st.markdown('### 전체 변수 중요도')
-        st.dataframe(f['importance'],use_container_width=True,hide_index=True)
+        st.dataframe(f['importance'],use_container_width=True,hide_index=True,height=420)
         st.bar_chart(f['importance'].head(12).set_index('팩터'))
         st.markdown('### 종목별 팩터 그룹 기여도')
         tickers=f['ranked'].Ticker.tolist()
         chosen=st.selectbox('종목 선택',tickers)
         gd=f['groups'][f['groups'].Ticker==chosen].set_index('팩터 그룹')
         st.bar_chart(gd[['Ridge 기여도']])
-        st.dataframe(gd,use_container_width=True)
+        st.dataframe(gd,use_container_width=True,height=360)
         st.caption('기여도는 Ridge 선형 구성요소만 반영합니다. 트리 모델의 비선형 효과를 완전히 분해한 값은 아닙니다. 글로벌 중요도는 모델 전체의 인과적 효과를 뜻하지 않습니다.')
 
 if page=='팩터 모델 · 백테스트':
@@ -441,7 +470,7 @@ if page=='팩터 모델 · 백테스트':
             plot['Portfolio cumulative']=(1+plot.PortfolioReturn).cumprod()-1
             plot['QQQ cumulative']=(1+plot.BenchmarkReturn).cumprod()-1
             st.line_chart(plot[['Portfolio cumulative','QQQ cumulative']])
-            st.dataframe(bt,use_container_width=True,hide_index=True)
+            st.dataframe(bt,use_container_width=True,hide_index=True,height=420)
             st.download_button('백테스트 CSV 다운로드',bt.to_csv(index=False).encode('utf-8-sig'),'factor_backtest.csv','text/csv')
             st.caption('주의: 현재 유니버스 기반 과거 재구성은 생존편향이 남을 수 있습니다. 비용은 단순 10bp 가정이며, 배당/체결/시장충격 등을 완전히 반영하지 않습니다.')
 
@@ -454,7 +483,7 @@ if page=='팩터 모델 · 개별 종목':
         row=f['ranked'][f['ranked'].Ticker==ticker].iloc[0]
         a,b,c=st.columns(3); a.metric('현재가',f"${row.Close:.2f}"); b.metric('예상 초과수익률',f"{row['예상 초과수익률(63일)']:.2%}"); c.metric('랭킹',f"#{alltick.index(ticker)+1}")
         gd=f['groups'][f['groups'].Ticker==ticker].sort_values('Ridge 기여도',ascending=False)
-        st.markdown('### 팩터 그룹 기여도'); st.bar_chart(gd.set_index('팩터 그룹')[['Ridge 기여도']]); st.dataframe(gd,use_container_width=True,hide_index=True)
+        st.markdown('### 팩터 그룹 기여도'); st.bar_chart(gd.set_index('팩터 그룹')[['Ridge 기여도']]); st.dataframe(gd,use_container_width=True,hide_index=True,height=420)
         st.caption('현재 가격 팩터 모델의 상대적 예측 결과이며 목표주가나 수익 보장이 아닙니다. 재무제표·애널리스트 전망 수정 팩터는 포함되지 않았습니다.')
 
 if page in ('눌림목 모델 · 실시간 신호','눌림목 모델 · 1개월 테스트'):
@@ -472,7 +501,7 @@ if page in ('눌림목 모델 · 실시간 신호','눌림목 모델 · 1개월 
         data=live if page.endswith('실시간 신호') else past
         if data.empty: st.info('현재 조건에 부합하는 종목이 없습니다.')
         else:
-            st.dataframe(data,use_container_width=True,hide_index=True)
+            st.dataframe(data,use_container_width=True,hide_index=True,height=420)
             st.download_button('현재 표 CSV 다운로드',data.to_csv(index=False).encode('utf-8-sig'),'pullback_signals.csv','text/csv')
         if page.endswith('1개월 테스트'):
             st.warning('이 테스트의 최고수익률은 신호 발생 후 현재까지의 최고가를 사용하므로, 실제 체결 가능한 수익률과 다릅니다. 향후 고가를 이용한 성과는 매도 시점을 사전에 알 수 없다는 한계가 있습니다.')
