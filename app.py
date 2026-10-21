@@ -26,115 +26,85 @@ st.set_page_config(
 st.markdown(r"""
 <style>
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css');
-:root { color-scheme: dark; }
+:root { color-scheme: light; }
 html, body, [class*="css"], [data-testid="stAppViewContainer"] {
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  color: #203247;
 }
 .stApp {
-  background: radial-gradient(ellipse at 50% -20%, #142d4b 0%, #0b1421 42%, #070b12 100%);
-  color: #edf5ff;
+  background: linear-gradient(145deg, #f4f8fc 0%, #eaf2fa 48%, #f7faff 100%);
+  color: #203247;
 }
-/* Keep the app title below Streamlit's floating top bar on first load. */
-[data-testid="stHeader"] { background: rgba(7, 11, 18, .94); }
+[data-testid="stHeader"] { background: rgba(244,248,252,.96); }
 .block-container {
-  padding-top: 3.35rem !important;
-  padding-bottom: 2.5rem !important;
+  padding-top: 3.55rem !important; padding-bottom: 2.5rem !important;
   padding-left: clamp(.7rem, 2.7vw, 2rem) !important;
   padding-right: clamp(.7rem, 2.7vw, 2rem) !important;
   max-width: 1500px !important;
 }
 .app-hero {
-  position: relative;
-  overflow: hidden;
-  margin: .35rem 0 1.35rem;
+  position: relative; overflow: hidden; margin: .45rem 0 1.35rem;
   padding: 1.35rem 1.45rem 1.25rem;
-  border: 1px solid rgba(142, 173, 210, .22);
-  border-radius: 25px;
-  background: linear-gradient(125deg, rgba(40, 48, 60, .98), rgba(24, 33, 46, .98) 62%, rgba(15, 62, 95, .92));
-  box-shadow: 0 15px 42px rgba(0,0,0,.24);
+  border: 1px solid #d5e3f1; border-radius: 23px;
+  background: linear-gradient(120deg, #ffffff 0%, #e8f3ff 64%, #d9efff 100%);
+  box-shadow: 0 10px 30px rgba(42, 83, 125, .09);
 }
-.app-hero:after {
-  content: ""; position: absolute; width: 210px; height: 210px; right: -75px; top: -100px;
-  border-radius: 50%; border: 28px solid rgba(56, 189, 248, .08); pointer-events: none;
-}
-.main-title {
-  margin: 0 !important; padding: 0 !important;
-  color: #f7fbff; font-size: clamp(1.8rem, 5vw, 3.0rem);
-  line-height: 1.22; font-weight: 850; letter-spacing: -.045em;
-  white-space: normal; overflow-wrap: normal; word-break: keep-all;
-}
-.sub-title {
-  margin: .45rem 0 0 !important; color: #b5c5d8;
-  font-size: clamp(.78rem, 2.5vw, 1rem); line-height: 1.55;
-  letter-spacing: .015em;
-}
-.eyebrow { color: #73d4ff; font-size: .72rem; font-weight: 800; letter-spacing: .13em; margin-bottom: .45rem; }
-h1, h2, h3, h4 { color: #f2f7ff !important; letter-spacing: -.025em; }
-p, [data-testid="stMarkdownContainer"] { overflow-wrap: break-word; }
-[data-testid="stSidebar"] {
-  background: linear-gradient(180deg, #101c2b, #080e17);
-  border-right: 1px solid rgba(112, 176, 225, .19);
-}
-[data-testid="stSidebar"] h2 { font-size: 1.12rem; }
-[data-testid="stRadio"] > label { font-size: .78rem; color: #9cb4ce; }
-[data-testid="stRadio"] div[role="radiogroup"] { gap: .35rem; }
-[data-testid="stRadio"] div[role="radiogroup"] label {
-  border: 1px solid rgba(125, 166, 207, .16); border-radius: 11px;
-  padding: .48rem .58rem; background: rgba(17, 33, 51, .74);
-}
-[data-testid="stRadio"] div[role="radiogroup"] label:has(input:checked) {
-  background: linear-gradient(100deg, #145b91, #087eaa);
-  border-color: rgba(113, 216, 255, .72);
-}
-.stButton > button, .stDownloadButton > button {
-  width: 100%; min-height: 2.55rem; border-radius: 12px;
-  border: 1px solid rgba(96, 196, 244, .48);
-  background: linear-gradient(115deg, #12639a, #0d86ad);
-  color: #f6fbff; font-weight: 750; transition: filter .15s ease;
-}
-.stButton > button:hover, .stDownloadButton > button:hover {
-  filter: brightness(1.12); border-color: #9ce5ff; color: white;
-}
-[data-testid="stMetric"] {
-  background: linear-gradient(145deg, rgba(18, 37, 58, .92), rgba(10, 23, 37, .92));
-  border: 1px solid rgba(96, 170, 219, .24); padding: 11px 13px; border-radius: 15px;
-}
-[data-testid="stMetricLabel"] { color: #a4bad1 !important; }
-[data-testid="stMetricValue"] { color: #edf8ff !important; }
-[data-testid="stDataFrame"] {
-  width: 100%; max-width: 100%; border: 1px solid rgba(96, 170, 219, .22);
-  border-radius: 12px; overflow: hidden; background: rgba(8, 18, 30, .8);
-}
-[data-testid="stDataFrame"] iframe { max-width: 100% !important; }
-[data-testid="stAlert"] { border-radius: 12px; }
-[data-testid="stSelectbox"] label, [data-testid="stSlider"] label { color: #b8cee3 !important; }
-hr { border-color: rgba(115, 175, 225, .19) !important; }
-.menu-section-title { margin: .2rem 0 .25rem; color: #f5f9ff; font-size: 1.18rem; font-weight: 800; }
-.menu-section-note { margin: 0 0 1rem; color: #94a9bf; font-size: .88rem; line-height: 1.5; }
-/* Home cards: charcoal like the reference, with restrained blue/cyan accents. */
-[data-testid="stVerticalBlockBorderWrapper"] > div {
-  border-color: rgba(137, 163, 190, .22) !important;
-  border-radius: 19px !important;
-  background: linear-gradient(155deg, rgba(23, 31, 42, .96), rgba(10, 17, 27, .98)) !important;
-}
-.menu-card { min-height: 8.2rem; padding: .05rem .02rem .15rem; }
-.menu-icon { color: #83dcff; font-size: 1.55rem; line-height: 1.1; margin-bottom: .8rem; }
-.menu-number { color: #61c9f4; font-size: .68rem; font-weight: 850; letter-spacing: .11em; margin-bottom: .32rem; }
-.menu-title { color: #f6f9ff; font-size: clamp(.98rem, 2.6vw, 1.24rem); line-height: 1.35; font-weight: 800; margin-bottom: .42rem; }
-.menu-desc { color: #a5b3c4; font-size: clamp(.76rem, 2vw, .9rem); line-height: 1.55; min-height: 2.65rem; }
-.menu-card-button { margin-top: .5rem; }
-.page-kicker { color: #74d6ff; font-size: .72rem; font-weight: 850; letter-spacing: .13em; margin-bottom: .25rem; }
-.page-title { color: #f4f9ff; font-size: clamp(1.25rem, 3.5vw, 1.75rem); font-weight: 820; line-height: 1.3; margin-bottom: .5rem; }
-@media (max-width: 640px) {
-  .block-container { padding-top: 3.75rem !important; padding-left: .62rem !important; padding-right: .62rem !important; }
-  .app-hero { margin-top: .4rem; padding: 1.05rem 1rem 1rem; border-radius: 19px; }
-  .main-title { font-size: clamp(1.75rem, 7.2vw, 2.2rem); }
-  .sub-title { font-size: .78rem; }
-  .menu-card { min-height: 8rem; }
-  [data-testid="stMetric"] { padding: 8px 9px; }
-  [data-testid="stMetricValue"] { font-size: 1.25rem; }
-  [data-testid="stDataFrame"] { font-size: 11px !important; }
-  [data-testid="stVerticalBlockBorderWrapper"] { margin-bottom: .35rem; }
+.app-hero:after { content:""; position:absolute; width:210px; height:210px; right:-75px; top:-100px; border-radius:50%; border:28px solid rgba(48,145,215,.10); pointer-events:none; }
+.main-title { margin:0 !important; padding:0 !important; color:#173b60; font-size:clamp(1.8rem,5vw,3rem); line-height:1.22; font-weight:850; letter-spacing:-.045em; white-space:normal; overflow-wrap:normal; word-break:keep-all; }
+.sub-title { margin:.45rem 0 0 !important; color:#58728d; font-size:clamp(.78rem,2.5vw,1rem); line-height:1.55; letter-spacing:.015em; }
+.eyebrow, .page-kicker { color:#1686c4; font-size:.72rem; font-weight:850; letter-spacing:.13em; margin-bottom:.45rem; }
+h1, h2, h3, h4 { color:#203e5c !important; letter-spacing:-.025em; }
+p, [data-testid="stMarkdownContainer"] { overflow-wrap:break-word; }
+[data-testid="stSidebar"] { background:linear-gradient(180deg,#f0f6fc,#e6eff8); border-right:1px solid #d5e3f0; }
+[data-testid="stSidebar"] h2 { font-size:1.12rem; color:#234867 !important; }
+[data-testid="stRadio"] > label { font-size:.78rem; color:#58728d; }
+[data-testid="stRadio"] div[role="radiogroup"] { gap:.35rem; }
+[data-testid="stRadio"] div[role="radiogroup"] label { border:1px solid #d7e4f1; border-radius:11px; padding:.48rem .58rem; background:#f9fcff; }
+[data-testid="stRadio"] div[role="radiogroup"] label:has(input:checked) { background:linear-gradient(100deg,#d9edff,#c9eaff); border-color:#6bb9e8; }
+.stButton > button, .stDownloadButton > button { width:100%; min-height:2.55rem; border-radius:12px; border:1px solid #9bc9e8; background:linear-gradient(115deg,#e3f3ff,#cbeaff); color:#164b73; font-weight:750; transition:filter .15s ease; }
+.stButton > button:hover, .stDownloadButton > button:hover { filter:brightness(.98); border-color:#4aa9e3; color:#103d60; }
+[data-testid="stMetric"] { background:linear-gradient(145deg,#ffffff,#edf6ff); border:1px solid #d7e6f3; padding:11px 13px; border-radius:15px; box-shadow:0 4px 14px rgba(40,85,125,.04); }
+[data-testid="stMetricLabel"] { color:#58728d !important; }
+[data-testid="stMetricValue"] { color:#173f63 !important; }
+[data-testid="stDataFrame"], [data-testid="stTable"] { width:100%; max-width:100%; border:1px solid #d6e3ef; border-radius:12px; overflow:hidden; background:#fff; }
+[data-testid="stDataFrame"] iframe { max-width:100% !important; }
+[data-testid="stTable"] table { width:100% !important; table-layout:fixed; }
+[data-testid="stTable"] th { background:#eaf4fd !important; color:#234867 !important; font-size:.78rem !important; }
+[data-testid="stTable"] td { color:#2d4358 !important; font-size:.78rem !important; overflow-wrap:anywhere; }
+[data-testid="stAlert"] { border-radius:12px; }
+[data-testid="stSelectbox"] label, [data-testid="stSlider"] label { color:#526d86 !important; }
+hr { border-color:#d8e5f1 !important; }
+.menu-section-title { margin:.2rem 0 .25rem; color:#234867; font-size:1.18rem; font-weight:800; }
+.menu-section-note { margin:0 0 1rem; color:#627b94; font-size:.88rem; line-height:1.5; }
+[data-testid="stVerticalBlockBorderWrapper"] > div { border-color:#d5e3ef !important; border-radius:19px !important; background:linear-gradient(155deg,#ffffff,#f0f7fd) !important; box-shadow:0 5px 18px rgba(41,81,119,.045); }
+.menu-card { min-height:9.2rem; padding:.08rem .04rem .25rem; display:flex; flex-direction:column; }
+/* 홈 메뉴만 카드 높이를 통일해 2열 그리드가 반듯하게 보이도록 */
+[data-testid="stVerticalBlockBorderWrapper"]:has(.menu-card) { min-height: 15.2rem; height:100%; }
+[data-testid="stVerticalBlockBorderWrapper"]:has(.menu-card) > div { min-height:15.2rem; height:100%; display:flex; flex-direction:column; justify-content:space-between; }
+[data-testid="stVerticalBlockBorderWrapper"]:has(.menu-card) .stButton { margin-top:auto; }
+.menu-icon { display:inline-flex; align-items:center; justify-content:center; width:2.6rem; height:2.6rem; border-radius:13px; background:linear-gradient(145deg,#e4f4ff,#d2ebff); border:1px solid #c1e3f8; }
+.menu-number { margin-top:.55rem; }
+.menu-desc { min-height:3rem; }
+.menu-icon { color:#238ec8; font-size:1.55rem; line-height:1.1; margin-bottom:.8rem; }
+.menu-number { color:#2189c1; font-size:.68rem; font-weight:850; letter-spacing:.11em; margin-bottom:.32rem; }
+.menu-title { color:#203f5b; font-size:clamp(.98rem,2.6vw,1.24rem); line-height:1.35; font-weight:800; margin-bottom:.42rem; }
+.menu-desc { color:#617990; font-size:clamp(.76rem,2vw,.9rem); line-height:1.55; min-height:2.65rem; }
+.page-title { color:#203f5b; font-size:clamp(1.25rem,3.5vw,1.75rem); font-weight:820; line-height:1.3; margin-bottom:.5rem; }
+@media (max-width:640px) {
+  .block-container { padding-top:3.9rem !important; padding-left:.62rem !important; padding-right:.62rem !important; }
+  .app-hero { margin-top:.45rem; padding:1.05rem 1rem 1rem; border-radius:19px; }
+  .main-title { font-size:clamp(1.75rem,7.2vw,2.2rem); }
+  .sub-title { font-size:.78rem; }
+  .menu-card { min-height:8.6rem; }
+  [data-testid="stVerticalBlockBorderWrapper"]:has(.menu-card),
+  [data-testid="stVerticalBlockBorderWrapper"]:has(.menu-card) > div { min-height:13.2rem; height:100%; }
+  .menu-desc { min-height:3.2rem; font-size:.76rem; }
+  .menu-title { font-size:1rem; }
+  [data-testid="stMetric"] { padding:8px 9px; }
+  [data-testid="stMetricValue"] { font-size:1.25rem; }
+  [data-testid="stDataFrame"] { font-size:11px !important; }
+  [data-testid="stVerticalBlockBorderWrapper"] { margin-bottom:.35rem; }
+  [data-testid="stTable"] th, [data-testid="stTable"] td { font-size:.69rem !important; padding:.35rem .25rem !important; }
 }
 </style>
 """, unsafe_allow_html=True)
@@ -501,8 +471,7 @@ def show_stable_table(data, height=360, column_width='small'):
 # PAGES
 # =========================
 if page == '대시보드':
-    render_page_heading('대시보드')
-    st.markdown('<div class="menu-section-title">메뉴 바로가기</div><div class="menu-section-note">원하는 분석 화면을 선택하세요. 세부 화면에 들어가면 왼쪽 메뉴에서 이동할 수 있습니다.</div>', unsafe_allow_html=True)
+    st.markdown('<div class="menu-section-title">분석 메뉴</div><div class="menu-section-note">원하는 기능을 선택하세요. 각 카드는 동일한 높이의 2열 레이아웃으로 배치했습니다.</div>', unsafe_allow_html=True)
     f = st.session_state.factor_results
     p = st.session_state.pullback_results
     menu_cards = [
@@ -609,7 +578,8 @@ if page=='팩터 모델 · 추천 종목':
         compact['평균거래대금($M)'] = (pd.to_numeric(compact.pop('평균 거래대금(USD)'), errors='coerce') / 1_000_000).map(lambda x: f'{x:,.0f}' if pd.notna(x) else '—')
         compact = compact.rename(columns={'예상 초과수익률(63일)': '예상 초과(63일)'})
         compact['현재가'] = pd.to_numeric(compact['현재가'], errors='coerce').map(lambda x: f'${x:,.2f}' if pd.notna(x) else '—')
-        show_stable_table(compact, height=360)
+        # Static table: avoids the embedded grid capturing vertical swipe gestures on mobile.
+        st.table(compact)
         st.download_button('추천 종목 CSV 다운로드',df.to_csv(index=False).encode('utf-8-sig'),'factor_recommendations.csv','text/csv')
     else: st.info('먼저 대시보드 또는 이 페이지에서 팩터 모델을 실행하세요.')
 
