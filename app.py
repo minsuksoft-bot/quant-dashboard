@@ -90,12 +90,36 @@ hr { border-color:#d8e5f1 !important; }
 .menu-title { color:#203f5b; font-size:clamp(.98rem,2.6vw,1.24rem); line-height:1.35; font-weight:800; margin-bottom:.42rem; }
 .menu-desc { color:#617990; font-size:clamp(.76rem,2vw,.9rem); line-height:1.55; min-height:2.65rem; }
 .page-title { color:#203f5b; font-size:clamp(1.25rem,3.5vw,1.75rem); font-weight:820; line-height:1.3; margin-bottom:.5rem; }
+
+/* Force the home menu to remain a true two-column grid on phones.
+   Streamlit normally stacks columns on narrow screens; only rows containing
+   menu cards are overridden, so tables and detail pages remain responsive. */
+[data-testid="stHorizontalBlock"]:has(.menu-card) {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  gap: .72rem !important;
+  align-items: stretch !important;
+}
+[data-testid="stHorizontalBlock"]:has(.menu-card) > [data-testid="stColumn"] {
+  width: auto !important;
+  min-width: 0 !important;
+  flex: none !important;
+  padding: 0 !important;
+}
+[data-testid="stHorizontalBlock"]:has(.menu-card) [data-testid="stVerticalBlockBorderWrapper"] {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+[data-testid="stHorizontalBlock"]:has(.menu-card) .menu-card {
+  min-width: 0 !important;
+}
+
 @media (max-width:640px) {
   .block-container { padding-top:3.9rem !important; padding-left:.62rem !important; padding-right:.62rem !important; }
   .app-hero { margin-top:.45rem; padding:1.05rem 1rem 1rem; border-radius:19px; }
   .main-title { font-size:clamp(1.75rem,7.2vw,2.2rem); }
   .sub-title { font-size:.78rem; }
-  .menu-card { min-height:8.6rem; }
+  .menu-card { min-height:8.6rem; padding:0; }
   [data-testid="stVerticalBlockBorderWrapper"]:has(.menu-card),
   [data-testid="stVerticalBlockBorderWrapper"]:has(.menu-card) > div { min-height:13.2rem; height:100%; }
   .menu-desc { min-height:3.2rem; font-size:.76rem; }
