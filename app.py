@@ -149,6 +149,99 @@ hr { border-color:#d8e5f1 !important; }
   [data-testid="stVerticalBlockBorderWrapper"] { margin-bottom:.35rem; }
   [data-testid="stTable"] th, [data-testid="stTable"] td { font-size:.69rem !important; padding:.35rem .25rem !important; }
 }
+
+
+/* FINAL HOME MENU OVERRIDES: target the actual Streamlit widget keys.
+   The earlier selector used .menu-card, but these items are st.button widgets. */
+[data-testid="stHorizontalBlock"]:has([class*="st-key-home_card_factor_"]),
+[data-testid="stHorizontalBlock"]:has([class*="st-key-home_card_technical_"]) {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  grid-auto-flow: row !important;
+  align-items: stretch !important;
+  gap: .8rem !important;
+  width: 100% !important;
+  flex-wrap: nowrap !important;
+}
+[data-testid="stHorizontalBlock"]:has([class*="st-key-home_card_factor_"]) > [data-testid="column"],
+[data-testid="stHorizontalBlock"]:has([class*="st-key-home_card_technical_"]) > [data-testid="column"] {
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  flex: none !important;
+  padding: 0 !important;
+}
+[class*="st-key-home_card_factor_"] button,
+[class*="st-key-home_card_technical_"] button {
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 10.1rem !important;
+  height: 10.1rem !important;
+  padding: 1rem !important;
+  border: 1px solid #9bc9e8 !important;
+  border-radius: 18px !important;
+  background: linear-gradient(145deg, #e5f4ff 0%, #d1eaff 100%) !important;
+  color: #204c70 !important;
+  box-shadow: 0 5px 14px rgba(43, 102, 150, .07) !important;
+  text-align: left !important;
+  white-space: normal !important;
+  overflow: hidden !important;
+  line-height: 1.43 !important;
+  font-size: .91rem !important;
+}
+[class*="st-key-home_card_factor_"] button > div,
+[class*="st-key-home_card_technical_"] button > div {
+  width: 100% !important;
+  min-width: 0 !important;
+  text-align: left !important;
+}
+[class*="st-key-home_card_factor_"] button p,
+[class*="st-key-home_card_technical_"] button p {
+  width: 100% !important;
+  margin: 0 !important;
+  text-align: left !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  line-height: 1.45 !important;
+}
+[class*="st-key-home_card_factor_"] button strong,
+[class*="st-key-home_card_technical_"] button strong {
+  display: block !important;
+  font-size: 1.02rem !important;
+  line-height: 1.35 !important;
+  margin: 0 0 .45rem !important;
+  color: #173f60 !important;
+}
+[class*="st-key-home_card_factor_"] button:hover,
+[class*="st-key-home_card_technical_"] button:hover {
+  border-color: #4ba8dc !important;
+  background: linear-gradient(145deg, #d9f0ff 0%, #c4e5ff 100%) !important;
+}
+@media (max-width: 640px) {
+  [data-testid="stHorizontalBlock"]:has([class*="st-key-home_card_factor_"]),
+  [data-testid="stHorizontalBlock"]:has([class*="st-key-home_card_technical_"]) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: .62rem !important;
+  }
+  [class*="st-key-home_card_factor_"] button,
+  [class*="st-key-home_card_technical_"] button {
+    min-height: 10rem !important;
+    height: 10rem !important;
+    padding: .82rem !important;
+    border-radius: 16px !important;
+    font-size: .79rem !important;
+  }
+  [class*="st-key-home_card_factor_"] button strong,
+  [class*="st-key-home_card_technical_"] button strong {
+    font-size: .91rem !important;
+    margin-bottom: .4rem !important;
+  }
+}
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -531,7 +624,7 @@ if page == '대시보드':
         for idx, (col, item) in enumerate(zip(cols, factor_cards[row_start:row_start+2]), start=row_start):
             title, desc, target = item
             with col:
-                label = f'**{title}**\n\n{desc}'
+                label = f'**{title}**  \n{desc}'
                 if st.button(label, key=f'home_card_factor_{idx}', use_container_width=True):
                     st.session_state.page = target
                     st.session_state.pop('page_radio', None)
@@ -546,7 +639,7 @@ if page == '대시보드':
     for idx, (col, item) in enumerate(zip(cols, technical_cards)):
         title, desc, target = item
         with col:
-            label = f'**{title}**\n\n{desc}'
+            label = f'**{title}**  \n{desc}'
             if st.button(label, key=f'home_card_technical_{idx}', use_container_width=True):
                 st.session_state.page = target
                 st.session_state.pop('page_radio', None)
