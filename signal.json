@@ -1,102 +1,120 @@
 {
-  "generated_at": "2026-10-20 23:41:10",
+  "generated_at": "2026-10-21 23:56:32",
   "lookback_days": 5,
   "signals": [
     {
-      "ticker": "AES",
-      "date": "2026-10-16",
+      "ticker": "WAT",
+      "date": "2026-10-19",
       "score": 3,
-      "close": 14.97
+      "close": 457.47
+    },
+    {
+      "ticker": "IOT",
+      "date": "2026-10-19",
+      "score": 3,
+      "close": 43.24
     },
     {
       "ticker": "SHOP",
-      "date": "2026-10-16",
+      "date": "2026-10-19",
       "score": 2,
-      "close": 173.48
+      "close": 174.29
     },
     {
-      "ticker": "HUM",
-      "date": "2026-10-16",
+      "ticker": "CRL",
+      "date": "2026-10-19",
       "score": 2,
-      "close": 427.38
-    },
-    {
-      "ticker": "WAT",
-      "date": "2026-10-16",
-      "score": 2,
-      "close": 442.83
+      "close": 344.87
     },
     {
       "ticker": "FAST",
-      "date": "2026-10-16",
+      "date": "2026-10-19",
       "score": 2,
-      "close": 51.65
+      "close": 52.49
     },
     {
-      "ticker": "SN",
-      "date": "2026-10-16",
+      "ticker": "MET",
+      "date": "2026-10-19",
       "score": 2,
-      "close": 198.72
+      "close": 102.18
+    },
+    {
+      "ticker": "ESTC",
+      "date": "2026-10-19",
+      "score": 2,
+      "close": 98.81
+    },
+    {
+      "ticker": "TRMB",
+      "date": "2026-10-19",
+      "score": 2,
+      "close": 62.59
+    },
+    {
+      "ticker": "AAPL",
+      "date": "2026-10-19",
+      "score": 1,
+      "close": 343.99
+    },
+    {
+      "ticker": "TMO",
+      "date": "2026-10-19",
+      "score": 1,
+      "close": 694.02
+    },
+    {
+      "ticker": "KMI",
+      "date": "2026-10-19",
+      "score": 1,
+      "close": 33.97
+    },
+    {
+      "ticker": "ULTA",
+      "date": "2026-10-19",
+      "score": 1,
+      "close": 606.99
+    },
+    {
+      "ticker": "GO",
+      "date": "2026-10-19",
+      "score": 1,
+      "close": 13.15
+    },
+    {
+      "ticker": "WRB",
+      "date": "2026-10-19",
+      "score": 1,
+      "close": 74.34
+    },
+    {
+      "ticker": "MTD",
+      "date": "2026-10-19",
+      "score": 1,
+      "close": 1677.94
     },
     {
       "ticker": "NOW",
       "date": "2026-10-16",
       "score": 1,
-      "close": 149.54
+      "close": 153.12
     },
     {
       "ticker": "ELV",
       "date": "2026-10-16",
       "score": 1,
-      "close": 440.18
-    },
-    {
-      "ticker": "ISRG",
-      "date": "2026-10-16",
-      "score": 1,
-      "close": 438.0
+      "close": 434.13
     },
     {
       "ticker": "RBLX",
       "date": "2026-10-16",
       "score": 1,
-      "close": 52.35
-    },
-    {
-      "ticker": "MET",
-      "date": "2026-10-16",
-      "score": 1,
-      "close": 101.18
-    },
-    {
-      "ticker": "BIIB",
-      "date": "2026-10-16",
-      "score": 1,
-      "close": 243.1
-    },
-    {
-      "ticker": "EXPD",
-      "date": "2026-10-16",
-      "score": 1,
-      "close": 198.41
+      "close": 52.55
     },
     {
       "ticker": "VRSN",
       "date": "2026-10-16",
       "score": 1,
-      "close": 306.53
-    },
-    {
-      "ticker": "ONON",
-      "date": "2026-10-15",
-      "score": 1,
-      "close": 35.42
-    },
-    {
-      "ticker": "APA",
-      "date": "2026-10-15",
-      "score": 1,
-      "close": 49.9
+      "close": 307.25
     }
   ]
 }
