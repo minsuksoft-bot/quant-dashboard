@@ -1,150 +1,144 @@
 {
-  "generated_at": "2026-10-22 23:55:14",
+  "generated_at": "2026-10-23 23:47:30",
   "lookback_days": 5,
   "signals": [
     {
-      "ticker": "MKTX",
-      "date": "2026-10-20",
+      "ticker": "AES",
+      "date": "2026-10-21",
       "score": 3,
-      "close": 164.66
+      "close": 15.0
     },
     {
-      "ticker": "AAPL",
-      "date": "2026-10-20",
+      "ticker": "ISRG",
+      "date": "2026-10-21",
       "score": 2,
-      "close": 348.22
+      "close": 452.29
     },
     {
-      "ticker": "WRB",
-      "date": "2026-10-20",
+      "ticker": "DVN",
+      "date": "2026-10-21",
       "score": 2,
-      "close": 75.55
+      "close": 51.39
     },
     {
-      "ticker": "CRM",
-      "date": "2026-10-20",
+      "ticker": "XOM",
+      "date": "2026-10-21",
       "score": 1,
-      "close": 250.29
+      "close": 183.21
     },
     {
-      "ticker": "WMT",
-      "date": "2026-10-20",
+      "ticker": "ABBV",
+      "date": "2026-10-21",
       "score": 1,
-      "close": 121.12
+      "close": 285.64
+    },
+    {
+      "ticker": "COP",
+      "date": "2026-10-21",
+      "score": 1,
+      "close": 150.8
+    },
+    {
+      "ticker": "SHEL",
+      "date": "2026-10-21",
+      "score": 1,
+      "close": 108.18
+    },
+    {
+      "ticker": "PBR",
+      "date": "2026-10-21",
+      "score": 1,
+      "close": 26.16
+    },
+    {
+      "ticker": "CE",
+      "date": "2026-10-21",
+      "score": 1,
+      "close": 47.71
+    },
+    {
+      "ticker": "IFF",
+      "date": "2026-10-21",
+      "score": 1,
+      "close": 94.15
+    },
+    {
+      "ticker": "EQNR",
+      "date": "2026-10-21",
+      "score": 1,
+      "close": 48.82
     },
     {
       "ticker": "BP",
       "date": "2026-10-20",
       "score": 1,
-      "close": 50.05
+      "close": 51.32
     },
     {
       "ticker": "KR",
       "date": "2026-10-20",
       "score": 1,
-      "close": 67.87
+      "close": 66.77
     },
     {
-      "ticker": "ECL",
+      "ticker": "KMI",
       "date": "2026-10-20",
       "score": 1,
-      "close": 292.3
-    },
-    {
-      "ticker": "UHS",
-      "date": "2026-10-20",
-      "score": 1,
-      "close": 188.13
-    },
-    {
-      "ticker": "VLTO",
-      "date": "2026-10-20",
-      "score": 1,
-      "close": 104.9
-    },
-    {
-      "ticker": "EQNR",
-      "date": "2026-10-20",
-      "score": 1,
-      "close": 46.42
-    },
-    {
-      "ticker": "MTD",
-      "date": "2026-10-20",
-      "score": 1,
-      "close": 1684.64
+      "close": 34.43
     },
     {
       "ticker": "WAT",
       "date": "2026-10-19",
       "score": 3,
-      "close": 455.59
+      "close": 453.67
     },
     {
       "ticker": "IOT",
       "date": "2026-10-19",
       "score": 3,
-      "close": 43.78
+      "close": 44.92
     },
     {
       "ticker": "CRL",
       "date": "2026-10-19",
       "score": 2,
-      "close": 339.66
+      "close": 345.37
     },
     {
       "ticker": "FAST",
       "date": "2026-10-19",
       "score": 2,
-      "close": 52.73
-    },
-    {
-      "ticker": "MET",
-      "date": "2026-10-19",
-      "score": 2,
-      "close": 103.57
+      "close": 51.91
     },
     {
       "ticker": "ESTC",
       "date": "2026-10-19",
       "score": 2,
-      "close": 98.21
+      "close": 102.43
     },
     {
       "ticker": "TRMB",
       "date": "2026-10-19",
       "score": 2,
-      "close": 64.01
+      "close": 63.49
     },
     {
       "ticker": "ULTA",
       "date": "2026-10-19",
       "score": 1,
-      "close": 635.01
-    },
-    {
-      "ticker": "SHEL",
-      "date": "2026-10-19",
-      "score": 1,
-      "close": 105.8
+      "close": 624.46
     },
     {
       "ticker": "BIIB",
       "date": "2026-10-19",
       "score": 1,
-      "close": 253.84
+      "close": 250.69
     },
     {
       "ticker": "GO",
       "date": "2026-10-19",
       "score": 1,
-      "close": 13.9
-    },
-    {
-      "ticker": "SN",
-      "date": "2026-10-19",
-      "score": 1,
-      "close": 199.16
+      "close": 13.3
     }
   ]
 }
