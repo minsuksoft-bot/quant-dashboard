@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24 22:59:42",
+  "generated_at": "2026-10-25 23:04:35",
   "lookback_days": 5,
   "signals": [
     {
@@ -85,60 +85,6 @@
       "date": "2026-10-20",
       "score": 1,
       "close": 34.43
-    },
-    {
-      "ticker": "WAT",
-      "date": "2026-10-19",
-      "score": 3,
-      "close": 453.67
-    },
-    {
-      "ticker": "IOT",
-      "date": "2026-10-19",
-      "score": 3,
-      "close": 44.92
-    },
-    {
-      "ticker": "CRL",
-      "date": "2026-10-19",
-      "score": 2,
-      "close": 345.37
-    },
-    {
-      "ticker": "FAST",
-      "date": "2026-10-19",
-      "score": 2,
-      "close": 51.91
-    },
-    {
-      "ticker": "ESTC",
-      "date": "2026-10-19",
-      "score": 2,
-      "close": 102.43
-    },
-    {
-      "ticker": "TRMB",
-      "date": "2026-10-19",
-      "score": 2,
-      "close": 63.49
-    },
-    {
-      "ticker": "ULTA",
-      "date": "2026-10-19",
-      "score": 1,
-      "close": 624.46
-    },
-    {
-      "ticker": "BIIB",
-      "date": "2026-10-19",
-      "score": 1,
-      "close": 250.69
-    },
-    {
-      "ticker": "GO",
-      "date": "2026-10-19",
-      "score": 1,
-      "close": 13.3
     }
   ]
 }
