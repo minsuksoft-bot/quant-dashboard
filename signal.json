@@ -1,5 +1,66 @@
 {
-  "generated_at": "2026-10-29 00:40:24",
+  "generated_at": "2026-10-30 00:41:22",
   "lookback_days": 5,
-  "signals": []
+  "signals": [
+    {
+      "ticker": "RCL",
+      "date": "2026-10-26",
+      "score": 2,
+      "close": 298.3
+    },
+    {
+      "ticker": "ECL",
+      "date": "2026-10-26",
+      "score": 2,
+      "close": 292.41
+    },
+    {
+      "ticker": "PTC",
+      "date": "2026-10-26",
+      "score": 2,
+      "close": 194.97
+    },
+    {
+      "ticker": "LLY",
+      "date": "2026-10-26",
+      "score": 1,
+      "close": 1288.3
+    },
+    {
+      "ticker": "MAR",
+      "date": "2026-10-26",
+      "score": 1,
+      "close": 394.4
+    },
+    {
+      "ticker": "CCL",
+      "date": "2026-10-26",
+      "score": 1,
+      "close": 28.06
+    },
+    {
+      "ticker": "NI",
+      "date": "2026-10-26",
+      "score": 1,
+      "close": 43.87
+    },
+    {
+      "ticker": "TRMB",
+      "date": "2026-10-26",
+      "score": 1,
+      "close": 64.35
+    },
+    {
+      "ticker": "SN",
+      "date": "2026-10-26",
+      "score": 1,
+      "close": 198.17
+    },
+    {
+      "ticker": "MTD",
+      "date": "2026-10-26",
+      "score": 1,
+      "close": 1698.47
+    }
+  ]
 }
