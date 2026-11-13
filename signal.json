@@ -1,5 +1,222 @@
 {
-  "generated_at": "2026-11-12 02:09:36",
+  "generated_at": "2026-11-13 01:44:03",
   "lookback_days": 5,
-  "signals": []
+  "signals": [
+    {
+      "ticker": "ORLY",
+      "date": "2026-11-09",
+      "score": 3,
+      "close": 90.54
+    },
+    {
+      "ticker": "ALL",
+      "date": "2026-11-09",
+      "score": 3,
+      "close": 262.18
+    },
+    {
+      "ticker": "VRSN",
+      "date": "2026-11-09",
+      "score": 3,
+      "close": 314.09
+    },
+    {
+      "ticker": "BTI",
+      "date": "2026-11-09",
+      "score": 3,
+      "close": 61.05
+    },
+    {
+      "ticker": "MKTX",
+      "date": "2026-11-09",
+      "score": 3,
+      "close": 165.31
+    },
+    {
+      "ticker": "LYV",
+      "date": "2026-11-09",
+      "score": 2,
+      "close": 180.16
+    },
+    {
+      "ticker": "CB",
+      "date": "2026-11-09",
+      "score": 2,
+      "close": 370.33
+    },
+    {
+      "ticker": "WTW",
+      "date": "2026-11-09",
+      "score": 2,
+      "close": 334.18
+    },
+    {
+      "ticker": "ATO",
+      "date": "2026-11-09",
+      "score": 2,
+      "close": 175.65
+    },
+    {
+      "ticker": "SPOT",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 609.12
+    },
+    {
+      "ticker": "MA",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 660.73
+    },
+    {
+      "ticker": "KO",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 97.57
+    },
+    {
+      "ticker": "LIN",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 526.55
+    },
+    {
+      "ticker": "ROST",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 241.27
+    },
+    {
+      "ticker": "MDLZ",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 66.7
+    },
+    {
+      "ticker": "ICE",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 180.59
+    },
+    {
+      "ticker": "HSY",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 176.43
+    },
+    {
+      "ticker": "CME",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 315.87
+    },
+    {
+      "ticker": "MCO",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 514.93
+    },
+    {
+      "ticker": "MAR",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 429.18
+    },
+    {
+      "ticker": "ADP",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 306.36
+    },
+    {
+      "ticker": "UPS",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 112.45
+    },
+    {
+      "ticker": "DG",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 137.44
+    },
+    {
+      "ticker": "KR",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 69.49
+    },
+    {
+      "ticker": "SPGI",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 475.11
+    },
+    {
+      "ticker": "XEL",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 81.1
+    },
+    {
+      "ticker": "FOXA",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 67.98
+    },
+    {
+      "ticker": "WM",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 240.29
+    },
+    {
+      "ticker": "RSG",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 249.34
+    },
+    {
+      "ticker": "BJ",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 110.71
+    },
+    {
+      "ticker": "WEC",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 117.47
+    },
+    {
+      "ticker": "AFL",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 127.11
+    },
+    {
+      "ticker": "GWW",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 1486.53
+    },
+    {
+      "ticker": "WCN",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 192.23
+    },
+    {
+      "ticker": "EG",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 423.74
+    },
+    {
+      "ticker": "TYL",
+      "date": "2026-11-09",
+      "score": 1,
+      "close": 425.52
+    }
+  ]
 }
