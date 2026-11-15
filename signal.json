@@ -1,132 +1,192 @@
 {
-  "generated_at": "2026-11-14 01:20:11",
+  "generated_at": "2026-11-15 00:52:22",
   "lookback_days": 5,
   "signals": [
     {
-      "ticker": "ORLY",
-      "date": "2026-11-10",
+      "ticker": "BEKE",
+      "date": "2026-11-11",
       "score": 3,
-      "close": 91.56
+      "close": 17.86
     },
     {
-      "ticker": "WMT",
-      "date": "2026-11-10",
-      "score": 2,
-      "close": 126.19
+      "ticker": "KMB",
+      "date": "2026-11-11",
+      "score": 3,
+      "close": 109.43
     },
     {
-      "ticker": "AZO",
-      "date": "2026-11-10",
+      "ticker": "DPZ",
+      "date": "2026-11-11",
       "score": 2,
-      "close": 3252.19
+      "close": 341.72
     },
     {
-      "ticker": "ES",
-      "date": "2026-11-10",
+      "ticker": "DUK",
+      "date": "2026-11-11",
       "score": 2,
-      "close": 71.15
+      "close": 129.16
+    },
+    {
+      "ticker": "CCI",
+      "date": "2026-11-11",
+      "score": 2,
+      "close": 90.83
+    },
+    {
+      "ticker": "TRV",
+      "date": "2026-11-11",
+      "score": 2,
+      "close": 403.23
+    },
+    {
+      "ticker": "VICI",
+      "date": "2026-11-11",
+      "score": 2,
+      "close": 25.01
+    },
+    {
+      "ticker": "CPB",
+      "date": "2026-11-11",
+      "score": 2,
+      "close": 22.77
+    },
+    {
+      "ticker": "HRL",
+      "date": "2026-11-11",
+      "score": 2,
+      "close": 22.09
+    },
+    {
+      "ticker": "PYPL",
+      "date": "2026-11-11",
+      "score": 1,
+      "close": 59.28
+    },
+    {
+      "ticker": "PG",
+      "date": "2026-11-11",
+      "score": 1,
+      "close": 169.8
+    },
+    {
+      "ticker": "STZ",
+      "date": "2026-11-11",
+      "score": 1,
+      "close": 145.61
+    },
+    {
+      "ticker": "MDLZ",
+      "date": "2026-11-11",
+      "score": 1,
+      "close": 67.54
     },
     {
       "ticker": "VRSK",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "score": 1,
-      "close": 206.32
+      "close": 207.82
     },
     {
       "ticker": "ADP",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "score": 1,
-      "close": 307.92
+      "close": 309.93
     },
     {
       "ticker": "BDX",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "score": 1,
-      "close": 215.71
+      "close": 218.03
+    },
+    {
+      "ticker": "CL",
+      "date": "2026-11-11",
+      "score": 1,
+      "close": 99.67
+    },
+    {
+      "ticker": "PEG",
+      "date": "2026-11-11",
+      "score": 1,
+      "close": 75.88
+    },
+    {
+      "ticker": "ULTA",
+      "date": "2026-11-11",
+      "score": 1,
+      "close": 660.66
+    },
+    {
+      "ticker": "LNTH",
+      "date": "2026-11-11",
+      "score": 1,
+      "close": 101.59
+    },
+    {
+      "ticker": "EVRG",
+      "date": "2026-11-11",
+      "score": 1,
+      "close": 88.78
+    },
+    {
+      "ticker": "WEC",
+      "date": "2026-11-11",
+      "score": 1,
+      "close": 117.6
+    },
+    {
+      "ticker": "WRB",
+      "date": "2026-11-11",
+      "score": 1,
+      "close": 77.44
+    },
+    {
+      "ticker": "DEO",
+      "date": "2026-11-11",
+      "score": 1,
+      "close": 101.59
+    },
+    {
+      "ticker": "LNT",
+      "date": "2026-11-11",
+      "score": 1,
+      "close": 73.43
+    },
+    {
+      "ticker": "AEE",
+      "date": "2026-11-11",
+      "score": 1,
+      "close": 114.77
     },
     {
       "ticker": "XEL",
       "date": "2026-11-10",
       "score": 1,
-      "close": 81.5
+      "close": 81.61
     },
     {
       "ticker": "RSG",
       "date": "2026-11-10",
       "score": 1,
-      "close": 253.0
+      "close": 252.99
     },
     {
-      "ticker": "WEC",
+      "ticker": "PRU",
       "date": "2026-11-10",
       "score": 1,
-      "close": 117.48
-    },
-    {
-      "ticker": "CP",
-      "date": "2026-11-10",
-      "score": 1,
-      "close": 94.6
+      "close": 123.55
     },
     {
       "ticker": "WCN",
       "date": "2026-11-10",
       "score": 1,
-      "close": 193.92
+      "close": 193.97
     },
     {
       "ticker": "TEVA",
       "date": "2026-11-10",
       "score": 1,
-      "close": 43.65
-    },
-    {
-      "ticker": "AEE",
-      "date": "2026-11-10",
-      "score": 1,
-      "close": 113.52
-    },
-    {
-      "ticker": "BTI",
-      "date": "2026-11-09",
-      "score": 3,
-      "close": 61.04
-    },
-    {
-      "ticker": "KO",
-      "date": "2026-11-09",
-      "score": 1,
-      "close": 97.44
-    },
-    {
-      "ticker": "ICE",
-      "date": "2026-11-09",
-      "score": 1,
-      "close": 177.86
-    },
-    {
-      "ticker": "CME",
-      "date": "2026-11-09",
-      "score": 1,
-      "close": 315.5
-    },
-    {
-      "ticker": "GWW",
-      "date": "2026-11-09",
-      "score": 1,
-      "close": 1502.61
-    },
-    {
-      "ticker": "WRB",
-      "date": "2026-11-09",
-      "score": 1,
-      "close": 77.15
-    },
-    {
-      "ticker": "EG",
-      "date": "2026-11-09",
-      "score": 1,
-      "close": 422.33
+      "close": 44.5
     }
   ]
 }
