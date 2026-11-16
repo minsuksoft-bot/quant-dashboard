@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15 00:52:22",
+  "generated_at": "2026-11-16 00:51:27",
   "lookback_days": 5,
   "signals": [
     {
@@ -157,36 +157,6 @@
       "date": "2026-11-11",
       "score": 1,
       "close": 114.77
-    },
-    {
-      "ticker": "XEL",
-      "date": "2026-11-10",
-      "score": 1,
-      "close": 81.61
-    },
-    {
-      "ticker": "RSG",
-      "date": "2026-11-10",
-      "score": 1,
-      "close": 252.99
-    },
-    {
-      "ticker": "PRU",
-      "date": "2026-11-10",
-      "score": 1,
-      "close": 123.55
-    },
-    {
-      "ticker": "WCN",
-      "date": "2026-11-10",
-      "score": 1,
-      "close": 193.97
-    },
-    {
-      "ticker": "TEVA",
-      "date": "2026-11-10",
-      "score": 1,
-      "close": 44.5
     }
   ]
 }
