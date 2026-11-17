@@ -1,162 +1,246 @@
 {
-  "generated_at": "2026-11-16 00:51:27",
+  "generated_at": "2026-11-17 03:29:37",
   "lookback_days": 5,
   "signals": [
     {
-      "ticker": "BEKE",
-      "date": "2026-11-11",
-      "score": 3,
-      "close": 17.86
-    },
-    {
-      "ticker": "KMB",
-      "date": "2026-11-11",
-      "score": 3,
-      "close": 109.43
-    },
-    {
-      "ticker": "DPZ",
-      "date": "2026-11-11",
+      "ticker": "WMT",
+      "date": "2026-11-12",
       "score": 2,
-      "close": 341.72
+      "close": 128.41
     },
     {
-      "ticker": "DUK",
-      "date": "2026-11-11",
+      "ticker": "MA",
+      "date": "2026-11-12",
       "score": 2,
-      "close": 129.16
+      "close": 661.71
     },
     {
-      "ticker": "CCI",
-      "date": "2026-11-11",
+      "ticker": "SBUX",
+      "date": "2026-11-12",
       "score": 2,
-      "close": 90.83
+      "close": 108.72
     },
     {
-      "ticker": "TRV",
-      "date": "2026-11-11",
+      "ticker": "HSY",
+      "date": "2026-11-12",
       "score": 2,
-      "close": 403.23
+      "close": 174.87
     },
     {
-      "ticker": "VICI",
-      "date": "2026-11-11",
+      "ticker": "MDT",
+      "date": "2026-11-12",
       "score": 2,
-      "close": 25.01
+      "close": 102.88
     },
     {
-      "ticker": "CPB",
-      "date": "2026-11-11",
+      "ticker": "ZTS",
+      "date": "2026-11-12",
       "score": 2,
-      "close": 22.77
-    },
-    {
-      "ticker": "HRL",
-      "date": "2026-11-11",
-      "score": 2,
-      "close": 22.09
-    },
-    {
-      "ticker": "PYPL",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 59.28
-    },
-    {
-      "ticker": "PG",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 169.8
-    },
-    {
-      "ticker": "STZ",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 145.61
-    },
-    {
-      "ticker": "MDLZ",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 67.54
-    },
-    {
-      "ticker": "VRSK",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 207.82
-    },
-    {
-      "ticker": "ADP",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 309.93
-    },
-    {
-      "ticker": "BDX",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 218.03
+      "close": 84.39
     },
     {
       "ticker": "CL",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 99.67
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 100.99
     },
     {
-      "ticker": "PEG",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 75.88
+      "ticker": "CNC",
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 74.77
     },
     {
-      "ticker": "ULTA",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 660.66
+      "ticker": "DUK",
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 130.59
+    },
+    {
+      "ticker": "EIX",
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 61.97
+    },
+    {
+      "ticker": "FDX",
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 327.65
+    },
+    {
+      "ticker": "NDAQ",
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 108.52
     },
     {
       "ticker": "LNTH",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 101.59
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 101.72
     },
     {
-      "ticker": "EVRG",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 88.78
+      "ticker": "WTW",
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 338.13
     },
     {
-      "ticker": "WEC",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 117.6
+      "ticker": "MSCI",
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 664.49
     },
     {
-      "ticker": "WRB",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 77.44
+      "ticker": "ED",
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 121.88
     },
     {
-      "ticker": "DEO",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 101.59
+      "ticker": "SJM",
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 135.54
     },
     {
-      "ticker": "LNT",
-      "date": "2026-11-11",
-      "score": 1,
-      "close": 73.43
+      "ticker": "ACGL",
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 110.89
     },
     {
-      "ticker": "AEE",
-      "date": "2026-11-11",
+      "ticker": "PTC",
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 196.38
+    },
+    {
+      "ticker": "EXLS",
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 43.6
+    },
+    {
+      "ticker": "TSN",
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 63.95
+    },
+    {
+      "ticker": "RBA",
+      "date": "2026-11-12",
+      "score": 2,
+      "close": 95.32
+    },
+    {
+      "ticker": "PEP",
+      "date": "2026-11-12",
       "score": 1,
-      "close": 114.77
+      "close": 146.43
+    },
+    {
+      "ticker": "CMCSA",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 25.6
+    },
+    {
+      "ticker": "PG",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 173.02
+    },
+    {
+      "ticker": "STZ",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 146.63
+    },
+    {
+      "ticker": "HCA",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 511.78
+    },
+    {
+      "ticker": "MCK",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 1105.04
+    },
+    {
+      "ticker": "DRI",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 230.93
+    },
+    {
+      "ticker": "CHD",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 114.74
+    },
+    {
+      "ticker": "CCEP",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 119.19
+    },
+    {
+      "ticker": "DGX",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 262.21
+    },
+    {
+      "ticker": "AFL",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 128.08
+    },
+    {
+      "ticker": "G",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 44.28
+    },
+    {
+      "ticker": "CRI",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 35.1
+    },
+    {
+      "ticker": "VLTO",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 120.31
+    },
+    {
+      "ticker": "COLM",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 75.63
+    },
+    {
+      "ticker": "HDB",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 26.29
+    },
+    {
+      "ticker": "LH",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 372.46
+    },
+    {
+      "ticker": "TYL",
+      "date": "2026-11-12",
+      "score": 1,
+      "close": 425.98
     }
   ]
 }
