@@ -1,5 +1,96 @@
 {
-  "generated_at": "2026-11-19 02:22:51",
+  "generated_at": "2026-11-20 02:05:19",
   "lookback_days": 5,
-  "signals": []
+  "signals": [
+    {
+      "ticker": "BBIO",
+      "date": "2026-11-16",
+      "score": 2,
+      "close": 78.01
+    },
+    {
+      "ticker": "WEC",
+      "date": "2026-11-16",
+      "score": 2,
+      "close": 117.47
+    },
+    {
+      "ticker": "BIIB",
+      "date": "2026-11-16",
+      "score": 2,
+      "close": 251.41
+    },
+    {
+      "ticker": "DLTR",
+      "date": "2026-11-16",
+      "score": 2,
+      "close": 142.44
+    },
+    {
+      "ticker": "CDW",
+      "date": "2026-11-16",
+      "score": 2,
+      "close": 169.01
+    },
+    {
+      "ticker": "PTC",
+      "date": "2026-11-16",
+      "score": 2,
+      "close": 195.85
+    },
+    {
+      "ticker": "SN",
+      "date": "2026-11-16",
+      "score": 2,
+      "close": 230.09
+    },
+    {
+      "ticker": "SHAK",
+      "date": "2026-11-16",
+      "score": 2,
+      "close": 74.45
+    },
+    {
+      "ticker": "MTD",
+      "date": "2026-11-16",
+      "score": 2,
+      "close": 1737.26
+    },
+    {
+      "ticker": "MAR",
+      "date": "2026-11-16",
+      "score": 1,
+      "close": 425.9
+    },
+    {
+      "ticker": "IDXX",
+      "date": "2026-11-16",
+      "score": 1,
+      "close": 698.47
+    },
+    {
+      "ticker": "LNTH",
+      "date": "2026-11-16",
+      "score": 1,
+      "close": 102.0
+    },
+    {
+      "ticker": "PRCT",
+      "date": "2026-11-16",
+      "score": 1,
+      "close": 25.18
+    },
+    {
+      "ticker": "KTB",
+      "date": "2026-11-16",
+      "score": 1,
+      "close": 83.25
+    },
+    {
+      "ticker": "CROX",
+      "date": "2026-11-16",
+      "score": 1,
+      "close": 162.76
+    }
+  ]
 }
