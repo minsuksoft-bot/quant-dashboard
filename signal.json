@@ -1,24 +1,48 @@
 {
-  "generated_at": "2026-11-21 02:01:07",
+  "generated_at": "2026-11-22 01:02:07",
   "lookback_days": 5,
   "signals": [
     {
-      "ticker": "LNTH",
-      "date": "2026-11-17",
-      "score": 2,
-      "close": 102.1
+      "ticker": "HIG",
+      "date": "2026-11-18",
+      "score": 3,
+      "close": 136.84
     },
     {
-      "ticker": "BBIO",
-      "date": "2026-11-16",
+      "ticker": "WMT",
+      "date": "2026-11-18",
       "score": 2,
-      "close": 78.18
+      "close": 127.95
     },
     {
-      "ticker": "PRCT",
-      "date": "2026-11-16",
-      "score": 1,
-      "close": 25.75
+      "ticker": "HSY",
+      "date": "2026-11-18",
+      "score": 2,
+      "close": 175.48
+    },
+    {
+      "ticker": "CL",
+      "date": "2026-11-18",
+      "score": 2,
+      "close": 98.71
+    },
+    {
+      "ticker": "SJM",
+      "date": "2026-11-18",
+      "score": 2,
+      "close": 133.68
+    },
+    {
+      "ticker": "AWK",
+      "date": "2026-11-18",
+      "score": 2,
+      "close": 149.53
+    },
+    {
+      "ticker": "WRB",
+      "date": "2026-11-18",
+      "score": 2,
+      "close": 78.31
     }
   ]
 }
