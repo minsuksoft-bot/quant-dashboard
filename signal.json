@@ -1,48 +1,72 @@
 {
-  "generated_at": "2026-11-23 01:27:39",
+  "generated_at": "2026-11-24 05:11:05",
   "lookback_days": 5,
   "signals": [
     {
-      "ticker": "HIG",
-      "date": "2026-11-18",
+      "ticker": "WM",
+      "date": "2026-11-19",
       "score": 3,
-      "close": 136.84
+      "close": 240.59
+    },
+    {
+      "ticker": "RSG",
+      "date": "2026-11-19",
+      "score": 3,
+      "close": 247.69
     },
     {
       "ticker": "WMT",
-      "date": "2026-11-18",
+      "date": "2026-11-19",
       "score": 2,
-      "close": 127.95
+      "close": 129.58
     },
     {
-      "ticker": "HSY",
-      "date": "2026-11-18",
+      "ticker": "FE",
+      "date": "2026-11-19",
       "score": 2,
-      "close": 175.48
+      "close": 47.54
     },
     {
-      "ticker": "CL",
-      "date": "2026-11-18",
+      "ticker": "WTW",
+      "date": "2026-11-19",
       "score": 2,
-      "close": 98.71
+      "close": 335.77
     },
     {
-      "ticker": "SJM",
-      "date": "2026-11-18",
+      "ticker": "DRI",
+      "date": "2026-11-19",
       "score": 2,
-      "close": 133.68
+      "close": 232.27
     },
     {
-      "ticker": "AWK",
-      "date": "2026-11-18",
+      "ticker": "YUMC",
+      "date": "2026-11-19",
       "score": 2,
-      "close": 149.53
+      "close": 50.8
     },
     {
-      "ticker": "WRB",
-      "date": "2026-11-18",
+      "ticker": "ES",
+      "date": "2026-11-19",
       "score": 2,
-      "close": 78.31
+      "close": 71.45
+    },
+    {
+      "ticker": "ORLY",
+      "date": "2026-11-19",
+      "score": 1,
+      "close": 93.62
+    },
+    {
+      "ticker": "AZO",
+      "date": "2026-11-19",
+      "score": 1,
+      "close": 3285.06
+    },
+    {
+      "ticker": "LNTH",
+      "date": "2026-11-19",
+      "score": 1,
+      "close": 102.34
     }
   ]
 }
