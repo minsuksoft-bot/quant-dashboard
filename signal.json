@@ -1,90 +1,108 @@
 {
-  "generated_at": "2026-11-27 03:32:11",
+  "generated_at": "2026-11-28 03:09:07",
   "lookback_days": 5,
   "signals": [
+    {
+      "ticker": "AES",
+      "date": "2026-11-24",
+      "score": 3,
+      "close": 15.03
+    },
+    {
+      "ticker": "LNTH",
+      "date": "2026-11-24",
+      "score": 2,
+      "close": 102.19
+    },
+    {
+      "ticker": "CPB",
+      "date": "2026-11-24",
+      "score": 1,
+      "close": 24.17
+    },
     {
       "ticker": "AON",
       "date": "2026-11-23",
       "score": 3,
-      "close": 347.49
+      "close": 348.43
     },
     {
       "ticker": "HSY",
       "date": "2026-11-23",
       "score": 3,
-      "close": 182.57
+      "close": 182.77
+    },
+    {
+      "ticker": "BEKE",
+      "date": "2026-11-23",
+      "score": 3,
+      "close": 18.56
     },
     {
       "ticker": "AWK",
       "date": "2026-11-23",
       "score": 3,
-      "close": 152.84
+      "close": 153.76
     },
     {
       "ticker": "DUK",
       "date": "2026-11-23",
       "score": 2,
-      "close": 131.9
+      "close": 131.91
     },
     {
       "ticker": "TSCO",
       "date": "2026-11-23",
       "score": 2,
-      "close": 40.37
+      "close": 40.01
     },
     {
       "ticker": "HIG",
       "date": "2026-11-23",
       "score": 2,
-      "close": 139.78
+      "close": 139.58
     },
     {
       "ticker": "EG",
       "date": "2026-11-23",
       "score": 2,
-      "close": 433.64
+      "close": 436.0
     },
     {
       "ticker": "CMG",
       "date": "2026-11-23",
       "score": 1,
-      "close": 37.4
+      "close": 37.32
     },
     {
       "ticker": "KHC",
       "date": "2026-11-23",
       "score": 1,
-      "close": 26.51
+      "close": 26.49
     },
     {
       "ticker": "GIS",
       "date": "2026-11-23",
       "score": 1,
-      "close": 36.25
+      "close": 35.85
     },
     {
       "ticker": "EIX",
       "date": "2026-11-23",
       "score": 1,
-      "close": 63.39
-    },
-    {
-      "ticker": "LNTH",
-      "date": "2026-11-23",
-      "score": 1,
-      "close": 102.13
+      "close": 63.53
     },
     {
       "ticker": "BRO",
       "date": "2026-11-23",
       "score": 1,
-      "close": 78.43
+      "close": 78.38
     },
     {
       "ticker": "WRB",
       "date": "2026-11-23",
       "score": 1,
-      "close": 79.34
+      "close": 79.31
     }
   ]
 }
